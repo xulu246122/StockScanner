@@ -1,0 +1,14 @@
+{
+  "appId": "com.v65.android",
+  "appName": "StockScanner",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "cleartext": true
+  },
+  "plugins": {
+    "CapacitorHttp": {
+      "enabled": true
+    }
+  }
+}

@@ -1,0 +1,6041 @@
+/**
+ * Authentic Official Benchmark Constituents
+ * - S&P 500 (503 official stock constituents)
+ * - Nasdaq 100 (101 official stock constituents)
+ */
+
+export interface OfficialConstituentItem {
+  ticker: string;
+  name: string;
+  sector: string;
+  industry: string;
+  exchange?: 'NASDAQ' | 'NYSE' | string;
+  cik?: string;
+  isREIT?: boolean;
+  weight?: number;
+}
+
+export const OFFICIAL_SP500_CONSTITUENTS: OfficialConstituentItem[] = [
+  {
+    "ticker": "MMM",
+    "name": "3M",
+    "sector": "Industrials",
+    "industry": "Industrial Conglomerates",
+    "exchange": "NYSE",
+    "cik": "0000066740",
+    "isREIT": false
+  },
+  {
+    "ticker": "AOS",
+    "name": "A. O. Smith",
+    "sector": "Industrials",
+    "industry": "Building Products",
+    "exchange": "NYSE",
+    "cik": "0000091142",
+    "isREIT": false
+  },
+  {
+    "ticker": "ABT",
+    "name": "Abbott Laboratories",
+    "sector": "Health Care",
+    "industry": "Health Care Equipment",
+    "exchange": "NYSE",
+    "cik": "0000001800",
+    "isREIT": false
+  },
+  {
+    "ticker": "ABBV",
+    "name": "AbbVie",
+    "sector": "Health Care",
+    "industry": "Biotechnology",
+    "exchange": "NYSE",
+    "cik": "0001551152",
+    "isREIT": false
+  },
+  {
+    "ticker": "ACN",
+    "name": "Accenture",
+    "sector": "Information Technology",
+    "industry": "IT Consulting & Other Services",
+    "exchange": "NYSE",
+    "cik": "0001467373",
+    "isREIT": false
+  },
+  {
+    "ticker": "ADBE",
+    "name": "Adobe Inc.",
+    "sector": "Information Technology",
+    "industry": "Application Software",
+    "exchange": "NASDAQ",
+    "cik": "0000796343",
+    "isREIT": false
+  },
+  {
+    "ticker": "AMD",
+    "name": "Advanced Micro Devices",
+    "sector": "Information Technology",
+    "industry": "Semiconductors",
+    "exchange": "NASDAQ",
+    "cik": "0000002488",
+    "isREIT": false
+  },
+  {
+    "ticker": "AES",
+    "name": "AES Corporation",
+    "sector": "Utilities",
+    "industry": "Independent Power Producers & Energy Traders",
+    "exchange": "NYSE",
+    "cik": "0000874761",
+    "isREIT": false
+  },
+  {
+    "ticker": "AFL",
+    "name": "Aflac",
+    "sector": "Financials",
+    "industry": "Life & Health Insurance",
+    "exchange": "NYSE",
+    "cik": "0000004977",
+    "isREIT": false
+  },
+  {
+    "ticker": "A",
+    "name": "Agilent Technologies",
+    "sector": "Health Care",
+    "industry": "Life Sciences Tools & Services",
+    "exchange": "NYSE",
+    "cik": "0001090872",
+    "isREIT": false
+  },
+  {
+    "ticker": "APD",
+    "name": "Air Products",
+    "sector": "Materials",
+    "industry": "Industrial Gases",
+    "exchange": "NYSE",
+    "cik": "0000002969",
+    "isREIT": false
+  },
+  {
+    "ticker": "ABNB",
+    "name": "Airbnb",
+    "sector": "Consumer Discretionary",
+    "industry": "Hotels, Resorts & Cruise Lines",
+    "exchange": "NASDAQ",
+    "cik": "0001559720",
+    "isREIT": false
+  },
+  {
+    "ticker": "AKAM",
+    "name": "Akamai Technologies",
+    "sector": "Information Technology",
+    "industry": "Internet Services & Infrastructure",
+    "exchange": "NASDAQ",
+    "cik": "0001086222",
+    "isREIT": false
+  },
+  {
+    "ticker": "ALB",
+    "name": "Albemarle Corporation",
+    "sector": "Materials",
+    "industry": "Specialty Chemicals",
+    "exchange": "NYSE",
+    "cik": "0000915913",
+    "isREIT": false
+  },
+  {
+    "ticker": "ARE",
+    "name": "Alexandria Real Estate Equities",
+    "sector": "Real Estate",
+    "industry": "Office REITs",
+    "exchange": "NYSE",
+    "cik": "0001035443",
+    "isREIT": true
+  },
+  {
+    "ticker": "ALGN",
+    "name": "Align Technology",
+    "sector": "Health Care",
+    "industry": "Health Care Supplies",
+    "exchange": "NASDAQ",
+    "cik": "0001097149",
+    "isREIT": false
+  },
+  {
+    "ticker": "ALLE",
+    "name": "Allegion",
+    "sector": "Industrials",
+    "industry": "Building Products",
+    "exchange": "NYSE",
+    "cik": "0001579241",
+    "isREIT": false
+  },
+  {
+    "ticker": "LNT",
+    "name": "Alliant Energy",
+    "sector": "Utilities",
+    "industry": "Electric Utilities",
+    "exchange": "NASDAQ",
+    "cik": "0000352541",
+    "isREIT": false
+  },
+  {
+    "ticker": "ALL",
+    "name": "Allstate",
+    "sector": "Financials",
+    "industry": "Property & Casualty Insurance",
+    "exchange": "NYSE",
+    "cik": "0000899051",
+    "isREIT": false
+  },
+  {
+    "ticker": "GOOGL",
+    "name": "Alphabet Inc. (Class A)",
+    "sector": "Communication Services",
+    "industry": "Interactive Media & Services",
+    "exchange": "NASDAQ",
+    "cik": "0001652044",
+    "isREIT": false
+  },
+  {
+    "ticker": "GOOG",
+    "name": "Alphabet Inc. (Class C)",
+    "sector": "Communication Services",
+    "industry": "Interactive Media & Services",
+    "exchange": "NASDAQ",
+    "cik": "0001652044",
+    "isREIT": false
+  },
+  {
+    "ticker": "MO",
+    "name": "Altria",
+    "sector": "Consumer Staples",
+    "industry": "Tobacco",
+    "exchange": "NYSE",
+    "cik": "0000764180",
+    "isREIT": false
+  },
+  {
+    "ticker": "AMZN",
+    "name": "Amazon",
+    "sector": "Consumer Discretionary",
+    "industry": "Broadline Retail",
+    "exchange": "NASDAQ",
+    "cik": "0001018724",
+    "isREIT": false
+  },
+  {
+    "ticker": "AMCR",
+    "name": "Amcor",
+    "sector": "Materials",
+    "industry": "Paper & Plastic Packaging Products & Materials",
+    "exchange": "NYSE",
+    "cik": "0001748790",
+    "isREIT": false
+  },
+  {
+    "ticker": "AEE",
+    "name": "Ameren",
+    "sector": "Utilities",
+    "industry": "Multi-Utilities",
+    "exchange": "NYSE",
+    "cik": "0001002910",
+    "isREIT": false
+  },
+  {
+    "ticker": "AEP",
+    "name": "American Electric Power",
+    "sector": "Utilities",
+    "industry": "Electric Utilities",
+    "exchange": "NASDAQ",
+    "cik": "0000004904",
+    "isREIT": false
+  },
+  {
+    "ticker": "AXP",
+    "name": "American Express",
+    "sector": "Financials",
+    "industry": "Consumer Finance",
+    "exchange": "NYSE",
+    "cik": "0000004962",
+    "isREIT": false
+  },
+  {
+    "ticker": "AIG",
+    "name": "American International Group",
+    "sector": "Financials",
+    "industry": "Multi-line Insurance",
+    "exchange": "NYSE",
+    "cik": "0000005272",
+    "isREIT": false
+  },
+  {
+    "ticker": "AMT",
+    "name": "American Tower",
+    "sector": "Real Estate",
+    "industry": "Telecom Tower REITs",
+    "exchange": "NYSE",
+    "cik": "0001053507",
+    "isREIT": true
+  },
+  {
+    "ticker": "AWK",
+    "name": "American Water Works",
+    "sector": "Utilities",
+    "industry": "Water Utilities",
+    "exchange": "NYSE",
+    "cik": "0001410636",
+    "isREIT": false
+  },
+  {
+    "ticker": "AMP",
+    "name": "Ameriprise Financial",
+    "sector": "Financials",
+    "industry": "Asset Management & Custody Banks",
+    "exchange": "NYSE",
+    "cik": "0000820027",
+    "isREIT": false
+  },
+  {
+    "ticker": "AME",
+    "name": "Ametek",
+    "sector": "Industrials",
+    "industry": "Electrical Components & Equipment",
+    "exchange": "NYSE",
+    "cik": "0001037868",
+    "isREIT": false
+  },
+  {
+    "ticker": "AMGN",
+    "name": "Amgen",
+    "sector": "Health Care",
+    "industry": "Biotechnology",
+    "exchange": "NASDAQ",
+    "cik": "0000318154",
+    "isREIT": false
+  },
+  {
+    "ticker": "APH",
+    "name": "Amphenol",
+    "sector": "Information Technology",
+    "industry": "Electronic Components",
+    "exchange": "NYSE",
+    "cik": "0000820313",
+    "isREIT": false
+  },
+  {
+    "ticker": "ADI",
+    "name": "Analog Devices",
+    "sector": "Information Technology",
+    "industry": "Semiconductors",
+    "exchange": "NASDAQ",
+    "cik": "0000006281",
+    "isREIT": false
+  },
+  {
+    "ticker": "AON",
+    "name": "Aon plc",
+    "sector": "Financials",
+    "industry": "Insurance Brokers",
+    "exchange": "NYSE",
+    "cik": "0000315293",
+    "isREIT": false
+  },
+  {
+    "ticker": "APA",
+    "name": "APA Corporation",
+    "sector": "Energy",
+    "industry": "Oil & Gas Exploration & Production",
+    "exchange": "NASDAQ",
+    "cik": "0001841666",
+    "isREIT": false
+  },
+  {
+    "ticker": "APO",
+    "name": "Apollo Global Management",
+    "sector": "Financials",
+    "industry": "Asset Management & Custody Banks",
+    "exchange": "NYSE",
+    "cik": "0001858681",
+    "isREIT": false
+  },
+  {
+    "ticker": "AAPL",
+    "name": "Apple Inc.",
+    "sector": "Information Technology",
+    "industry": "Technology Hardware, Storage & Peripherals",
+    "exchange": "NASDAQ",
+    "cik": "0000320193",
+    "isREIT": false
+  },
+  {
+    "ticker": "AMAT",
+    "name": "Applied Materials",
+    "sector": "Information Technology",
+    "industry": "Semiconductor Materials & Equipment",
+    "exchange": "NASDAQ",
+    "cik": "0000006951",
+    "isREIT": false
+  },
+  {
+    "ticker": "APP",
+    "name": "AppLovin",
+    "sector": "Communication Services",
+    "industry": "Advertising",
+    "exchange": "NASDAQ",
+    "cik": "0001751008",
+    "isREIT": false
+  },
+  {
+    "ticker": "APTV",
+    "name": "Aptiv",
+    "sector": "Consumer Discretionary",
+    "industry": "Automotive Parts & Equipment",
+    "exchange": "NYSE",
+    "cik": "0001521332",
+    "isREIT": false
+  },
+  {
+    "ticker": "ACGL",
+    "name": "Arch Capital Group",
+    "sector": "Financials",
+    "industry": "Property & Casualty Insurance",
+    "exchange": "NASDAQ",
+    "cik": "0000947484",
+    "isREIT": false
+  },
+  {
+    "ticker": "ADM",
+    "name": "Archer Daniels Midland",
+    "sector": "Consumer Staples",
+    "industry": "Agricultural Products & Services",
+    "exchange": "NYSE",
+    "cik": "0000007084",
+    "isREIT": false
+  },
+  {
+    "ticker": "ARES",
+    "name": "Ares Management",
+    "sector": "Financials",
+    "industry": "Asset Management & Custody Banks",
+    "exchange": "NYSE",
+    "cik": "0001176948",
+    "isREIT": false
+  },
+  {
+    "ticker": "ANET",
+    "name": "Arista Networks",
+    "sector": "Information Technology",
+    "industry": "Communications Equipment",
+    "exchange": "NYSE",
+    "cik": "0001596532",
+    "isREIT": false
+  },
+  {
+    "ticker": "AJG",
+    "name": "Arthur J. Gallagher & Co.",
+    "sector": "Financials",
+    "industry": "Insurance Brokers",
+    "exchange": "NYSE",
+    "cik": "0000354190",
+    "isREIT": false
+  },
+  {
+    "ticker": "AIZ",
+    "name": "Assurant",
+    "sector": "Financials",
+    "industry": "Multi-line Insurance",
+    "exchange": "NYSE",
+    "cik": "0001267238",
+    "isREIT": false
+  },
+  {
+    "ticker": "T",
+    "name": "AT&T",
+    "sector": "Communication Services",
+    "industry": "Integrated Telecommunication Services",
+    "exchange": "NYSE",
+    "cik": "0000732717",
+    "isREIT": false
+  },
+  {
+    "ticker": "ATO",
+    "name": "Atmos Energy",
+    "sector": "Utilities",
+    "industry": "Gas Utilities",
+    "exchange": "NYSE",
+    "cik": "0000731802",
+    "isREIT": false
+  },
+  {
+    "ticker": "ADSK",
+    "name": "Autodesk",
+    "sector": "Information Technology",
+    "industry": "Application Software",
+    "exchange": "NASDAQ",
+    "cik": "0000769397",
+    "isREIT": false
+  },
+  {
+    "ticker": "ADP",
+    "name": "Automatic Data Processing",
+    "sector": "Industrials",
+    "industry": "Human Resource & Employment Services",
+    "exchange": "NASDAQ",
+    "cik": "0000008670",
+    "isREIT": false
+  },
+  {
+    "ticker": "AZO",
+    "name": "AutoZone",
+    "sector": "Consumer Discretionary",
+    "industry": "Automotive Retail",
+    "exchange": "NYSE",
+    "cik": "0000866787",
+    "isREIT": false
+  },
+  {
+    "ticker": "AVY",
+    "name": "Avery Dennison",
+    "sector": "Materials",
+    "industry": "Paper & Plastic Packaging Products & Materials",
+    "exchange": "NYSE",
+    "cik": "0000008818",
+    "isREIT": false
+  },
+  {
+    "ticker": "AXON",
+    "name": "Axon Enterprise",
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "exchange": "NASDAQ",
+    "cik": "0001069183",
+    "isREIT": false
+  },
+  {
+    "ticker": "BKR",
+    "name": "Baker Hughes",
+    "sector": "Energy",
+    "industry": "Oil & Gas Equipment & Services",
+    "exchange": "NASDAQ",
+    "cik": "0001701605",
+    "isREIT": false
+  },
+  {
+    "ticker": "BALL",
+    "name": "Ball Corporation",
+    "sector": "Materials",
+    "industry": "Metal, Glass & Plastic Containers",
+    "exchange": "NYSE",
+    "cik": "0000009389",
+    "isREIT": false
+  },
+  {
+    "ticker": "BAC",
+    "name": "Bank of America",
+    "sector": "Financials",
+    "industry": "Diversified Banks",
+    "exchange": "NYSE",
+    "cik": "0000070858",
+    "isREIT": false
+  },
+  {
+    "ticker": "BAX",
+    "name": "Baxter International",
+    "sector": "Health Care",
+    "industry": "Health Care Equipment",
+    "exchange": "NYSE",
+    "cik": "0000010456",
+    "isREIT": false
+  },
+  {
+    "ticker": "BDX",
+    "name": "Becton Dickinson",
+    "sector": "Health Care",
+    "industry": "Health Care Equipment",
+    "exchange": "NYSE",
+    "cik": "0000010795",
+    "isREIT": false
+  },
+  {
+    "ticker": "BRK-B",
+    "name": "Berkshire Hathaway",
+    "sector": "Financials",
+    "industry": "Multi-Sector Holdings",
+    "exchange": "NYSE",
+    "cik": "0001067983",
+    "isREIT": false
+  },
+  {
+    "ticker": "BBY",
+    "name": "Best Buy",
+    "sector": "Consumer Discretionary",
+    "industry": "Computer & Electronics Retail",
+    "exchange": "NYSE",
+    "cik": "0000764478",
+    "isREIT": false
+  },
+  {
+    "ticker": "TECH",
+    "name": "Bio-Techne",
+    "sector": "Health Care",
+    "industry": "Life Sciences Tools & Services",
+    "exchange": "NASDAQ",
+    "cik": "0000842023",
+    "isREIT": false
+  },
+  {
+    "ticker": "BIIB",
+    "name": "Biogen",
+    "sector": "Health Care",
+    "industry": "Biotechnology",
+    "exchange": "NASDAQ",
+    "cik": "0000875045",
+    "isREIT": false
+  },
+  {
+    "ticker": "BLK",
+    "name": "BlackRock",
+    "sector": "Financials",
+    "industry": "Asset Management & Custody Banks",
+    "exchange": "NYSE",
+    "cik": "0002012383",
+    "isREIT": false
+  },
+  {
+    "ticker": "BX",
+    "name": "Blackstone Inc.",
+    "sector": "Financials",
+    "industry": "Asset Management & Custody Banks",
+    "exchange": "NYSE",
+    "cik": "0001393818",
+    "isREIT": false
+  },
+  {
+    "ticker": "XYZ",
+    "name": "Block, Inc.",
+    "sector": "Financials",
+    "industry": "Transaction & Payment Processing Services",
+    "exchange": "NYSE",
+    "cik": "0001512673",
+    "isREIT": false
+  },
+  {
+    "ticker": "BE",
+    "name": "Bloom Energy",
+    "sector": "Industrials",
+    "industry": "Electrical Components & Equipment",
+    "exchange": "NYSE",
+    "cik": "0001664703",
+    "isREIT": false
+  },
+  {
+    "ticker": "BNY",
+    "name": "BNY Mellon",
+    "sector": "Financials",
+    "industry": "Asset Management & Custody Banks",
+    "exchange": "NYSE",
+    "cik": "0001390777",
+    "isREIT": false
+  },
+  {
+    "ticker": "BA",
+    "name": "Boeing",
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "exchange": "NYSE",
+    "cik": "0000012927",
+    "isREIT": false
+  },
+  {
+    "ticker": "BKNG",
+    "name": "Booking Holdings",
+    "sector": "Consumer Discretionary",
+    "industry": "Hotels, Resorts & Cruise Lines",
+    "exchange": "NASDAQ",
+    "cik": "0001075531",
+    "isREIT": false
+  },
+  {
+    "ticker": "BSX",
+    "name": "Boston Scientific",
+    "sector": "Health Care",
+    "industry": "Health Care Equipment",
+    "exchange": "NYSE",
+    "cik": "0000885725",
+    "isREIT": false
+  },
+  {
+    "ticker": "BMY",
+    "name": "Bristol Myers Squibb",
+    "sector": "Health Care",
+    "industry": "Pharmaceuticals",
+    "exchange": "NYSE",
+    "cik": "0000014272",
+    "isREIT": false
+  },
+  {
+    "ticker": "AVGO",
+    "name": "Broadcom",
+    "sector": "Information Technology",
+    "industry": "Semiconductors",
+    "exchange": "NASDAQ",
+    "cik": "0001730168",
+    "isREIT": false
+  },
+  {
+    "ticker": "BR",
+    "name": "Broadridge Financial Solutions",
+    "sector": "Industrials",
+    "industry": "Data Processing & Outsourced Services",
+    "exchange": "NYSE",
+    "cik": "0001383312",
+    "isREIT": false
+  },
+  {
+    "ticker": "BRO",
+    "name": "Brown & Brown",
+    "sector": "Financials",
+    "industry": "Insurance Brokers",
+    "exchange": "NYSE",
+    "cik": "0000079282",
+    "isREIT": false
+  },
+  {
+    "ticker": "BF-B",
+    "name": "Brown–Forman",
+    "sector": "Consumer Staples",
+    "industry": "Distillers & Vintners",
+    "exchange": "NYSE",
+    "cik": "0000014693",
+    "isREIT": false
+  },
+  {
+    "ticker": "BG",
+    "name": "Bunge Global",
+    "sector": "Consumer Staples",
+    "industry": "Agricultural Products & Services",
+    "exchange": "NYSE",
+    "cik": "0001996862",
+    "isREIT": false
+  },
+  {
+    "ticker": "BXP",
+    "name": "BXP, Inc.",
+    "sector": "Real Estate",
+    "industry": "Office REITs",
+    "exchange": "NYSE",
+    "cik": "0001037540",
+    "isREIT": true
+  },
+  {
+    "ticker": "CHRW",
+    "name": "C.H. Robinson",
+    "sector": "Industrials",
+    "industry": "Air Freight & Logistics",
+    "exchange": "NASDAQ",
+    "cik": "0001043277",
+    "isREIT": false
+  },
+  {
+    "ticker": "CDNS",
+    "name": "Cadence Design Systems",
+    "sector": "Information Technology",
+    "industry": "Application Software",
+    "exchange": "NASDAQ",
+    "cik": "0000813672",
+    "isREIT": false
+  },
+  {
+    "ticker": "CPT",
+    "name": "Camden Property Trust",
+    "sector": "Real Estate",
+    "industry": "Multi-Family Residential REITs",
+    "exchange": "NYSE",
+    "cik": "0000906345",
+    "isREIT": true
+  },
+  {
+    "ticker": "COF",
+    "name": "Capital One",
+    "sector": "Financials",
+    "industry": "Consumer Finance",
+    "exchange": "NYSE",
+    "cik": "0000927628",
+    "isREIT": false
+  },
+  {
+    "ticker": "CAH",
+    "name": "Cardinal Health",
+    "sector": "Health Care",
+    "industry": "Health Care Distributors",
+    "exchange": "NYSE",
+    "cik": "0000721371",
+    "isREIT": false
+  },
+  {
+    "ticker": "CCL",
+    "name": "Carnival Corporation",
+    "sector": "Consumer Discretionary",
+    "industry": "Hotels, Resorts & Cruise Lines",
+    "exchange": "NYSE",
+    "cik": "0000815097",
+    "isREIT": false
+  },
+  {
+    "ticker": "CARR",
+    "name": "Carrier Global",
+    "sector": "Industrials",
+    "industry": "Building Products",
+    "exchange": "NYSE",
+    "cik": "0001783180",
+    "isREIT": false
+  },
+  {
+    "ticker": "CVNA",
+    "name": "Carvana",
+    "sector": "Consumer Discretionary",
+    "industry": "Automotive Retail",
+    "exchange": "NYSE",
+    "cik": "0001690820",
+    "isREIT": false
+  },
+  {
+    "ticker": "CASY",
+    "name": "Casey's",
+    "sector": "Consumer Staples",
+    "industry": "Food Retail",
+    "exchange": "NASDAQ",
+    "cik": "0000726958",
+    "isREIT": false
+  },
+  {
+    "ticker": "CAT",
+    "name": "Caterpillar Inc.",
+    "sector": "Industrials",
+    "industry": "Construction Machinery & Heavy Transportation Equipment",
+    "exchange": "NYSE",
+    "cik": "0000018230",
+    "isREIT": false
+  },
+  {
+    "ticker": "CBOE",
+    "name": "Cboe Global Markets",
+    "sector": "Financials",
+    "industry": "Financial Exchanges & Data",
+    "exchange": "NYSE",
+    "cik": "0001374310",
+    "isREIT": false
+  },
+  {
+    "ticker": "CBRE",
+    "name": "CBRE Group",
+    "sector": "Real Estate",
+    "industry": "Real Estate Services",
+    "exchange": "NYSE",
+    "cik": "0001138118",
+    "isREIT": true
+  },
+  {
+    "ticker": "CDW",
+    "name": "CDW Corporation",
+    "sector": "Information Technology",
+    "industry": "Technology Distributors",
+    "exchange": "NASDAQ",
+    "cik": "0001402057",
+    "isREIT": false
+  },
+  {
+    "ticker": "COR",
+    "name": "Cencora",
+    "sector": "Health Care",
+    "industry": "Health Care Distributors",
+    "exchange": "NYSE",
+    "cik": "0001140859",
+    "isREIT": false
+  },
+  {
+    "ticker": "CNC",
+    "name": "Centene Corporation",
+    "sector": "Health Care",
+    "industry": "Managed Health Care",
+    "exchange": "NYSE",
+    "cik": "0001071739",
+    "isREIT": false
+  },
+  {
+    "ticker": "CNP",
+    "name": "CenterPoint Energy",
+    "sector": "Utilities",
+    "industry": "Multi-Utilities",
+    "exchange": "NYSE",
+    "cik": "0001130310",
+    "isREIT": false
+  },
+  {
+    "ticker": "CF",
+    "name": "CF Industries",
+    "sector": "Materials",
+    "industry": "Fertilizers & Agricultural Chemicals",
+    "exchange": "NYSE",
+    "cik": "0001324404",
+    "isREIT": false
+  },
+  {
+    "ticker": "CRL",
+    "name": "Charles River Laboratories",
+    "sector": "Health Care",
+    "industry": "Life Sciences Tools & Services",
+    "exchange": "NYSE",
+    "cik": "0001100682",
+    "isREIT": false
+  },
+  {
+    "ticker": "SCHW",
+    "name": "Charles Schwab Corporation",
+    "sector": "Financials",
+    "industry": "Investment Banking & Brokerage",
+    "exchange": "NYSE",
+    "cik": "0000316709",
+    "isREIT": false
+  },
+  {
+    "ticker": "CHTR",
+    "name": "Charter Communications",
+    "sector": "Communication Services",
+    "industry": "Cable & Satellite",
+    "exchange": "NASDAQ",
+    "cik": "0001091667",
+    "isREIT": false
+  },
+  {
+    "ticker": "CVX",
+    "name": "Chevron Corporation",
+    "sector": "Energy",
+    "industry": "Integrated Oil & Gas",
+    "exchange": "NYSE",
+    "cik": "0000093410",
+    "isREIT": false
+  },
+  {
+    "ticker": "CMG",
+    "name": "Chipotle Mexican Grill",
+    "sector": "Consumer Discretionary",
+    "industry": "Restaurants",
+    "exchange": "NYSE",
+    "cik": "0001058090",
+    "isREIT": false
+  },
+  {
+    "ticker": "CB",
+    "name": "Chubb Limited",
+    "sector": "Financials",
+    "industry": "Property & Casualty Insurance",
+    "exchange": "NYSE",
+    "cik": "0000896159",
+    "isREIT": false
+  },
+  {
+    "ticker": "CHD",
+    "name": "Church & Dwight",
+    "sector": "Consumer Staples",
+    "industry": "Household Products",
+    "exchange": "NYSE",
+    "cik": "0000313927",
+    "isREIT": false
+  },
+  {
+    "ticker": "CIEN",
+    "name": "Ciena",
+    "sector": "Information Technology",
+    "industry": "Communications Equipment",
+    "exchange": "NYSE",
+    "cik": "0000936395",
+    "isREIT": false
+  },
+  {
+    "ticker": "CI",
+    "name": "Cigna",
+    "sector": "Health Care",
+    "industry": "Health Care Services",
+    "exchange": "NYSE",
+    "cik": "0001739940",
+    "isREIT": false
+  },
+  {
+    "ticker": "CINF",
+    "name": "Cincinnati Financial",
+    "sector": "Financials",
+    "industry": "Property & Casualty Insurance",
+    "exchange": "NASDAQ",
+    "cik": "0000020286",
+    "isREIT": false
+  },
+  {
+    "ticker": "CTAS",
+    "name": "Cintas",
+    "sector": "Industrials",
+    "industry": "Diversified Support Services",
+    "exchange": "NASDAQ",
+    "cik": "0000723254",
+    "isREIT": false
+  },
+  {
+    "ticker": "CSCO",
+    "name": "Cisco",
+    "sector": "Information Technology",
+    "industry": "Communications Equipment",
+    "exchange": "NASDAQ",
+    "cik": "0000858877",
+    "isREIT": false
+  },
+  {
+    "ticker": "C",
+    "name": "Citigroup",
+    "sector": "Financials",
+    "industry": "Diversified Banks",
+    "exchange": "NYSE",
+    "cik": "0000831001",
+    "isREIT": false
+  },
+  {
+    "ticker": "CFG",
+    "name": "Citizens Financial Group",
+    "sector": "Financials",
+    "industry": "Regional Banks",
+    "exchange": "NYSE",
+    "cik": "0000759944",
+    "isREIT": false
+  },
+  {
+    "ticker": "CLX",
+    "name": "Clorox",
+    "sector": "Consumer Staples",
+    "industry": "Household Products",
+    "exchange": "NYSE",
+    "cik": "0000021076",
+    "isREIT": false
+  },
+  {
+    "ticker": "CME",
+    "name": "CME Group",
+    "sector": "Financials",
+    "industry": "Financial Exchanges & Data",
+    "exchange": "NASDAQ",
+    "cik": "0001156375",
+    "isREIT": false
+  },
+  {
+    "ticker": "CMS",
+    "name": "CMS Energy",
+    "sector": "Utilities",
+    "industry": "Multi-Utilities",
+    "exchange": "NYSE",
+    "cik": "0000811156",
+    "isREIT": false
+  },
+  {
+    "ticker": "KO",
+    "name": "Coca-Cola Company (The)",
+    "sector": "Consumer Staples",
+    "industry": "Soft Drinks & Non-alcoholic Beverages",
+    "exchange": "NYSE",
+    "cik": "0000021344",
+    "isREIT": false
+  },
+  {
+    "ticker": "CTSH",
+    "name": "Cognizant",
+    "sector": "Information Technology",
+    "industry": "IT Consulting & Other Services",
+    "exchange": "NASDAQ",
+    "cik": "0001058290",
+    "isREIT": false
+  },
+  {
+    "ticker": "COHR",
+    "name": "Coherent Corp.",
+    "sector": "Information Technology",
+    "industry": "Electronic Components",
+    "exchange": "NYSE",
+    "cik": "0000820318",
+    "isREIT": false
+  },
+  {
+    "ticker": "COIN",
+    "name": "Coinbase",
+    "sector": "Financials",
+    "industry": "Financial Exchanges & Data",
+    "exchange": "NASDAQ",
+    "cik": "0001679788",
+    "isREIT": false
+  },
+  {
+    "ticker": "CL",
+    "name": "Colgate-Palmolive",
+    "sector": "Consumer Staples",
+    "industry": "Household Products",
+    "exchange": "NYSE",
+    "cik": "0000021665",
+    "isREIT": false
+  },
+  {
+    "ticker": "CMCSA",
+    "name": "Comcast",
+    "sector": "Communication Services",
+    "industry": "Cable & Satellite",
+    "exchange": "NASDAQ",
+    "cik": "0001166691",
+    "isREIT": false
+  },
+  {
+    "ticker": "FIX",
+    "name": "Comfort Systems USA",
+    "sector": "Industrials",
+    "industry": "Construction & Engineering",
+    "exchange": "NYSE",
+    "cik": "0001035983",
+    "isREIT": false
+  },
+  {
+    "ticker": "COP",
+    "name": "ConocoPhillips",
+    "sector": "Energy",
+    "industry": "Oil & Gas Exploration & Production",
+    "exchange": "NYSE",
+    "cik": "0001163165",
+    "isREIT": false
+  },
+  {
+    "ticker": "ED",
+    "name": "Consolidated Edison",
+    "sector": "Utilities",
+    "industry": "Multi-Utilities",
+    "exchange": "NYSE",
+    "cik": "0001047862",
+    "isREIT": false
+  },
+  {
+    "ticker": "STZ",
+    "name": "Constellation Brands",
+    "sector": "Consumer Staples",
+    "industry": "Distillers & Vintners",
+    "exchange": "NYSE",
+    "cik": "0000016918",
+    "isREIT": false
+  },
+  {
+    "ticker": "CEG",
+    "name": "Constellation Energy",
+    "sector": "Utilities",
+    "industry": "Electric Utilities",
+    "exchange": "NASDAQ",
+    "cik": "0001868275",
+    "isREIT": false
+  },
+  {
+    "ticker": "COO",
+    "name": "Cooper Companies (The)",
+    "sector": "Health Care",
+    "industry": "Health Care Supplies",
+    "exchange": "NASDAQ",
+    "cik": "0000711404",
+    "isREIT": false
+  },
+  {
+    "ticker": "CPRT",
+    "name": "Copart",
+    "sector": "Industrials",
+    "industry": "Diversified Support Services",
+    "exchange": "NASDAQ",
+    "cik": "0000900075",
+    "isREIT": false
+  },
+  {
+    "ticker": "GLW",
+    "name": "Corning Inc.",
+    "sector": "Information Technology",
+    "industry": "Electronic Components",
+    "exchange": "NYSE",
+    "cik": "0000024741",
+    "isREIT": false
+  },
+  {
+    "ticker": "CPAY",
+    "name": "Corpay",
+    "sector": "Financials",
+    "industry": "Transaction & Payment Processing Services",
+    "exchange": "NYSE",
+    "cik": "0001175454",
+    "isREIT": false
+  },
+  {
+    "ticker": "CTVA",
+    "name": "Corteva",
+    "sector": "Materials",
+    "industry": "Fertilizers & Agricultural Chemicals",
+    "exchange": "NYSE",
+    "cik": "0001755672",
+    "isREIT": false
+  },
+  {
+    "ticker": "CSGP",
+    "name": "CoStar Group",
+    "sector": "Real Estate",
+    "industry": "Real Estate Services",
+    "exchange": "NASDAQ",
+    "cik": "0001057352",
+    "isREIT": true
+  },
+  {
+    "ticker": "COST",
+    "name": "Costco",
+    "sector": "Consumer Staples",
+    "industry": "Consumer Staples Merchandise Retail",
+    "exchange": "NASDAQ",
+    "cik": "0000909832",
+    "isREIT": false
+  },
+  {
+    "ticker": "CRH",
+    "name": "CRH plc",
+    "sector": "Materials",
+    "industry": "Construction Materials",
+    "exchange": "NYSE",
+    "cik": "0000849395",
+    "isREIT": false
+  },
+  {
+    "ticker": "CRWD",
+    "name": "CrowdStrike",
+    "sector": "Information Technology",
+    "industry": "Systems Software",
+    "exchange": "NASDAQ",
+    "cik": "0001535527",
+    "isREIT": false
+  },
+  {
+    "ticker": "CCI",
+    "name": "Crown Castle",
+    "sector": "Real Estate",
+    "industry": "Telecom Tower REITs",
+    "exchange": "NYSE",
+    "cik": "0001051470",
+    "isREIT": true
+  },
+  {
+    "ticker": "CSX",
+    "name": "CSX Corporation",
+    "sector": "Industrials",
+    "industry": "Rail Transportation",
+    "exchange": "NASDAQ",
+    "cik": "0000277948",
+    "isREIT": false
+  },
+  {
+    "ticker": "CMI",
+    "name": "Cummins",
+    "sector": "Industrials",
+    "industry": "Construction Machinery & Heavy Transportation Equipment",
+    "exchange": "NYSE",
+    "cik": "0000026172",
+    "isREIT": false
+  },
+  {
+    "ticker": "CVS",
+    "name": "CVS Health",
+    "sector": "Health Care",
+    "industry": "Health Care Services",
+    "exchange": "NYSE",
+    "cik": "0000064803",
+    "isREIT": false
+  },
+  {
+    "ticker": "DHR",
+    "name": "Danaher Corporation",
+    "sector": "Health Care",
+    "industry": "Life Sciences Tools & Services",
+    "exchange": "NYSE",
+    "cik": "0000313616",
+    "isREIT": false
+  },
+  {
+    "ticker": "DRI",
+    "name": "Darden Restaurants",
+    "sector": "Consumer Discretionary",
+    "industry": "Restaurants",
+    "exchange": "NYSE",
+    "cik": "0000940944",
+    "isREIT": false
+  },
+  {
+    "ticker": "DDOG",
+    "name": "Datadog",
+    "sector": "Information Technology",
+    "industry": "Application Software",
+    "exchange": "NASDAQ",
+    "cik": "0001561550",
+    "isREIT": false
+  },
+  {
+    "ticker": "DVA",
+    "name": "DaVita",
+    "sector": "Health Care",
+    "industry": "Health Care Services",
+    "exchange": "NYSE",
+    "cik": "0000927066",
+    "isREIT": false
+  },
+  {
+    "ticker": "DECK",
+    "name": "Deckers Brands",
+    "sector": "Consumer Discretionary",
+    "industry": "Footwear",
+    "exchange": "NYSE",
+    "cik": "0000910521",
+    "isREIT": false
+  },
+  {
+    "ticker": "DE",
+    "name": "Deere & Company",
+    "sector": "Industrials",
+    "industry": "Agricultural & Farm Machinery",
+    "exchange": "NYSE",
+    "cik": "0000315189",
+    "isREIT": false
+  },
+  {
+    "ticker": "DELL",
+    "name": "Dell Technologies",
+    "sector": "Information Technology",
+    "industry": "Technology Hardware, Storage & Peripherals",
+    "exchange": "NYSE",
+    "cik": "0001571996",
+    "isREIT": false
+  },
+  {
+    "ticker": "DAL",
+    "name": "Delta Air Lines",
+    "sector": "Industrials",
+    "industry": "Passenger Airlines",
+    "exchange": "NYSE",
+    "cik": "0000027904",
+    "isREIT": false
+  },
+  {
+    "ticker": "DVN",
+    "name": "Devon Energy",
+    "sector": "Energy",
+    "industry": "Oil & Gas Exploration & Production",
+    "exchange": "NYSE",
+    "cik": "0001090012",
+    "isREIT": false
+  },
+  {
+    "ticker": "DXCM",
+    "name": "Dexcom",
+    "sector": "Health Care",
+    "industry": "Health Care Equipment",
+    "exchange": "NASDAQ",
+    "cik": "0001093557",
+    "isREIT": false
+  },
+  {
+    "ticker": "FANG",
+    "name": "Diamondback Energy",
+    "sector": "Energy",
+    "industry": "Oil & Gas Exploration & Production",
+    "exchange": "NASDAQ",
+    "cik": "0001539838",
+    "isREIT": false
+  },
+  {
+    "ticker": "DLR",
+    "name": "Digital Realty",
+    "sector": "Real Estate",
+    "industry": "Data Center REITs",
+    "exchange": "NYSE",
+    "cik": "0001297996",
+    "isREIT": true
+  },
+  {
+    "ticker": "DG",
+    "name": "Dollar General",
+    "sector": "Consumer Staples",
+    "industry": "Consumer Staples Merchandise Retail",
+    "exchange": "NYSE",
+    "cik": "0000029534",
+    "isREIT": false
+  },
+  {
+    "ticker": "DLTR",
+    "name": "Dollar Tree",
+    "sector": "Consumer Staples",
+    "industry": "Consumer Staples Merchandise Retail",
+    "exchange": "NASDAQ",
+    "cik": "0000935703",
+    "isREIT": false
+  },
+  {
+    "ticker": "D",
+    "name": "Dominion Energy",
+    "sector": "Utilities",
+    "industry": "Multi-Utilities",
+    "exchange": "NYSE",
+    "cik": "0000715957",
+    "isREIT": false
+  },
+  {
+    "ticker": "DPZ",
+    "name": "Domino's",
+    "sector": "Consumer Discretionary",
+    "industry": "Restaurants",
+    "exchange": "NYSE",
+    "cik": "0001286681",
+    "isREIT": false
+  },
+  {
+    "ticker": "DASH",
+    "name": "DoorDash",
+    "sector": "Consumer Discretionary",
+    "industry": "Specialized Consumer Services",
+    "exchange": "NASDAQ",
+    "cik": "0001792789",
+    "isREIT": false
+  },
+  {
+    "ticker": "DOV",
+    "name": "Dover Corporation",
+    "sector": "Industrials",
+    "industry": "Industrial Machinery & Supplies & Components",
+    "exchange": "NYSE",
+    "cik": "0000029905",
+    "isREIT": false
+  },
+  {
+    "ticker": "DOW",
+    "name": "Dow Inc.",
+    "sector": "Materials",
+    "industry": "Commodity Chemicals",
+    "exchange": "NYSE",
+    "cik": "0001751788",
+    "isREIT": false
+  },
+  {
+    "ticker": "DHI",
+    "name": "D. R. Horton",
+    "sector": "Consumer Discretionary",
+    "industry": "Homebuilding",
+    "exchange": "NYSE",
+    "cik": "0000882184",
+    "isREIT": false
+  },
+  {
+    "ticker": "DTE",
+    "name": "DTE Energy",
+    "sector": "Utilities",
+    "industry": "Multi-Utilities",
+    "exchange": "NYSE",
+    "cik": "0000936340",
+    "isREIT": false
+  },
+  {
+    "ticker": "DUK",
+    "name": "Duke Energy",
+    "sector": "Utilities",
+    "industry": "Electric Utilities",
+    "exchange": "NYSE",
+    "cik": "0001326160",
+    "isREIT": false
+  },
+  {
+    "ticker": "DD",
+    "name": "DuPont",
+    "sector": "Industrials",
+    "industry": "Industrial Conglomerates",
+    "exchange": "NYSE",
+    "cik": "0001666700",
+    "isREIT": false
+  },
+  {
+    "ticker": "ETN",
+    "name": "Eaton Corporation",
+    "sector": "Industrials",
+    "industry": "Electrical Components & Equipment",
+    "exchange": "NYSE",
+    "cik": "0001551182",
+    "isREIT": false
+  },
+  {
+    "ticker": "EBAY",
+    "name": "eBay Inc.",
+    "sector": "Consumer Discretionary",
+    "industry": "Broadline Retail",
+    "exchange": "NASDAQ",
+    "cik": "0001065088",
+    "isREIT": false
+  },
+  {
+    "ticker": "ECHO",
+    "name": "EchoStar",
+    "sector": "Communication Services",
+    "industry": "Wireless Telecommunication Services",
+    "exchange": "NASDAQ",
+    "cik": "0001415404",
+    "isREIT": false
+  },
+  {
+    "ticker": "ECL",
+    "name": "Ecolab",
+    "sector": "Materials",
+    "industry": "Specialty Chemicals",
+    "exchange": "NYSE",
+    "cik": "0000031462",
+    "isREIT": false
+  },
+  {
+    "ticker": "EIX",
+    "name": "Edison International",
+    "sector": "Utilities",
+    "industry": "Electric Utilities",
+    "exchange": "NYSE",
+    "cik": "0000827052",
+    "isREIT": false
+  },
+  {
+    "ticker": "EW",
+    "name": "Edwards Lifesciences",
+    "sector": "Health Care",
+    "industry": "Health Care Equipment",
+    "exchange": "NYSE",
+    "cik": "0001099800",
+    "isREIT": false
+  },
+  {
+    "ticker": "ELV",
+    "name": "Elevance Health",
+    "sector": "Health Care",
+    "industry": "Managed Health Care",
+    "exchange": "NYSE",
+    "cik": "0001156039",
+    "isREIT": false
+  },
+  {
+    "ticker": "EME",
+    "name": "Emcor|| Industrials",
+    "sector": "Construction & Engineering",
+    "industry": "[[Norwalk, Connecticut]]",
+    "exchange": "NYSE",
+    "cik": "1994",
+    "isREIT": false
+  },
+  {
+    "ticker": "EMR",
+    "name": "Emerson Electric",
+    "sector": "Industrials",
+    "industry": "Electrical Components & Equipment",
+    "exchange": "NYSE",
+    "cik": "0000032604",
+    "isREIT": false
+  },
+  {
+    "ticker": "ETR",
+    "name": "Entergy",
+    "sector": "Utilities",
+    "industry": "Electric Utilities",
+    "exchange": "NYSE",
+    "cik": "0000065984",
+    "isREIT": false
+  },
+  {
+    "ticker": "EOG",
+    "name": "EOG Resources",
+    "sector": "Energy",
+    "industry": "Oil & Gas Exploration & Production",
+    "exchange": "NYSE",
+    "cik": "0000821189",
+    "isREIT": false
+  },
+  {
+    "ticker": "EQT",
+    "name": "EQT Corporation",
+    "sector": "Energy",
+    "industry": "Oil & Gas Exploration & Production",
+    "exchange": "NYSE",
+    "cik": "0000033213",
+    "isREIT": false
+  },
+  {
+    "ticker": "EFX",
+    "name": "Equifax",
+    "sector": "Industrials",
+    "industry": "Research & Consulting Services",
+    "exchange": "NYSE",
+    "cik": "0000033185",
+    "isREIT": false
+  },
+  {
+    "ticker": "EQIX",
+    "name": "Equinix",
+    "sector": "Real Estate",
+    "industry": "Data Center REITs",
+    "exchange": "NASDAQ",
+    "cik": "0001101239",
+    "isREIT": true
+  },
+  {
+    "ticker": "ERIE",
+    "name": "Erie Indemnity",
+    "sector": "Financials",
+    "industry": "Insurance Brokers",
+    "exchange": "NASDAQ",
+    "cik": "0000922621",
+    "isREIT": false
+  },
+  {
+    "ticker": "ESS",
+    "name": "Essex Property Trust",
+    "sector": "Real Estate",
+    "industry": "Multi-Family Residential REITs",
+    "exchange": "NYSE",
+    "cik": "0000920522",
+    "isREIT": true
+  },
+  {
+    "ticker": "EL",
+    "name": "Estée Lauder Companies (The)",
+    "sector": "Consumer Staples",
+    "industry": "Personal Care Products",
+    "exchange": "NYSE",
+    "cik": "0001001250",
+    "isREIT": false
+  },
+  {
+    "ticker": "EG",
+    "name": "Everest Group",
+    "sector": "Financials",
+    "industry": "Reinsurance",
+    "exchange": "NYSE",
+    "cik": "0001095073",
+    "isREIT": false
+  },
+  {
+    "ticker": "EVRG",
+    "name": "Evergy",
+    "sector": "Utilities",
+    "industry": "Electric Utilities",
+    "exchange": "NYSE",
+    "cik": "0001711269",
+    "isREIT": false
+  },
+  {
+    "ticker": "P",
+    "name": "Everpure",
+    "sector": "Information Technology",
+    "industry": "Technology Hardware, Storage & Peripherals",
+    "exchange": "NYSE",
+    "cik": "0001474432",
+    "isREIT": false
+  },
+  {
+    "ticker": "ES",
+    "name": "Eversource Energy",
+    "sector": "Utilities",
+    "industry": "Electric Utilities",
+    "exchange": "NYSE",
+    "cik": "0000072741",
+    "isREIT": false
+  },
+  {
+    "ticker": "EXC",
+    "name": "Exelon",
+    "sector": "Utilities",
+    "industry": "Electric Utilities",
+    "exchange": "NASDAQ",
+    "cik": "0001109357",
+    "isREIT": false
+  },
+  {
+    "ticker": "EXE",
+    "name": "Expand Energy",
+    "sector": "Energy",
+    "industry": "Oil & Gas Exploration & Production",
+    "exchange": "NASDAQ",
+    "cik": "0000895126",
+    "isREIT": false
+  },
+  {
+    "ticker": "EXPE",
+    "name": "Expedia Group",
+    "sector": "Consumer Discretionary",
+    "industry": "Hotels, Resorts & Cruise Lines",
+    "exchange": "NASDAQ",
+    "cik": "0001324424",
+    "isREIT": false
+  },
+  {
+    "ticker": "EXPD",
+    "name": "Expeditors International",
+    "sector": "Industrials",
+    "industry": "Air Freight & Logistics",
+    "exchange": "NASDAQ",
+    "cik": "0000746515",
+    "isREIT": false
+  },
+  {
+    "ticker": "EXR",
+    "name": "Extra Space Storage",
+    "sector": "Real Estate",
+    "industry": "Self-Storage REITs",
+    "exchange": "NYSE",
+    "cik": "0001289490",
+    "isREIT": true
+  },
+  {
+    "ticker": "XOM",
+    "name": "ExxonMobil",
+    "sector": "Energy",
+    "industry": "Integrated Oil & Gas",
+    "exchange": "NYSE",
+    "cik": "0002115436",
+    "isREIT": false
+  },
+  {
+    "ticker": "FFIV",
+    "name": "F5, Inc.",
+    "sector": "Information Technology",
+    "industry": "Communications Equipment",
+    "exchange": "NASDAQ",
+    "cik": "0001048695",
+    "isREIT": false
+  },
+  {
+    "ticker": "FDS",
+    "name": "FactSet",
+    "sector": "Financials",
+    "industry": "Financial Exchanges & Data",
+    "exchange": "NYSE",
+    "cik": "0001013237",
+    "isREIT": false
+  },
+  {
+    "ticker": "FICO",
+    "name": "Fair Isaac",
+    "sector": "Information Technology",
+    "industry": "Application Software",
+    "exchange": "NYSE",
+    "cik": "0000814547",
+    "isREIT": false
+  },
+  {
+    "ticker": "FAST",
+    "name": "Fastenal",
+    "sector": "Industrials",
+    "industry": "Trading Companies & Distributors",
+    "exchange": "NASDAQ",
+    "cik": "0000815556",
+    "isREIT": false
+  },
+  {
+    "ticker": "FRT",
+    "name": "Federal Realty Investment Trust",
+    "sector": "Real Estate",
+    "industry": "Retail REITs",
+    "exchange": "NYSE",
+    "cik": "0000034903",
+    "isREIT": true
+  },
+  {
+    "ticker": "FDX",
+    "name": "FedEx",
+    "sector": "Industrials",
+    "industry": "Air Freight & Logistics",
+    "exchange": "NYSE",
+    "cik": "0001048911",
+    "isREIT": false
+  },
+  {
+    "ticker": "FDXF",
+    "name": "FedEx Freight",
+    "sector": "Industrials",
+    "industry": "Cargo Ground Transportation",
+    "exchange": "NYSE",
+    "cik": "0002082247",
+    "isREIT": false
+  },
+  {
+    "ticker": "FERG",
+    "name": "Ferguson Enterprises",
+    "sector": "Industrials",
+    "industry": "Trading Companies & Distributors",
+    "exchange": "NYSE",
+    "cik": "0002011641",
+    "isREIT": false
+  },
+  {
+    "ticker": "FIS",
+    "name": "Fidelity National Information Services",
+    "sector": "Financials",
+    "industry": "Transaction & Payment Processing Services",
+    "exchange": "NYSE",
+    "cik": "0001136893",
+    "isREIT": false
+  },
+  {
+    "ticker": "FITB",
+    "name": "Fifth Third Bancorp",
+    "sector": "Financials",
+    "industry": "Regional Banks",
+    "exchange": "NYSE",
+    "cik": "0000035527",
+    "isREIT": false
+  },
+  {
+    "ticker": "FSLR",
+    "name": "First Solar",
+    "sector": "Information Technology",
+    "industry": "Semiconductors",
+    "exchange": "NASDAQ",
+    "cik": "0001274494",
+    "isREIT": false
+  },
+  {
+    "ticker": "FE",
+    "name": "FirstEnergy",
+    "sector": "Utilities",
+    "industry": "Electric Utilities",
+    "exchange": "NYSE",
+    "cik": "0001031296",
+    "isREIT": false
+  },
+  {
+    "ticker": "FISV",
+    "name": "Fiserv",
+    "sector": "Financials",
+    "industry": "Transaction & Payment Processing Services",
+    "exchange": "NASDAQ",
+    "cik": "0000798354",
+    "isREIT": false
+  },
+  {
+    "ticker": "FLEX",
+    "name": "Flex Ltd.",
+    "sector": "Information Technology",
+    "industry": "Electronic Manufacturing Services",
+    "exchange": "NASDAQ",
+    "cik": "0000866374",
+    "isREIT": false
+  },
+  {
+    "ticker": "F",
+    "name": "Ford Motor Company",
+    "sector": "Consumer Discretionary",
+    "industry": "Automobile Manufacturers",
+    "exchange": "NYSE",
+    "cik": "0000037996",
+    "isREIT": false
+  },
+  {
+    "ticker": "FTNT",
+    "name": "Fortinet",
+    "sector": "Information Technology",
+    "industry": "Systems Software",
+    "exchange": "NASDAQ",
+    "cik": "0001262039",
+    "isREIT": false
+  },
+  {
+    "ticker": "FTV",
+    "name": "Fortive",
+    "sector": "Industrials",
+    "industry": "Industrial Machinery & Supplies & Components",
+    "exchange": "NYSE",
+    "cik": "0001659166",
+    "isREIT": false
+  },
+  {
+    "ticker": "FOXA",
+    "name": "Fox Corporation (Class A)",
+    "sector": "Communication Services",
+    "industry": "Broadcasting",
+    "exchange": "NASDAQ",
+    "cik": "0001754301",
+    "isREIT": false
+  },
+  {
+    "ticker": "FOX",
+    "name": "Fox Corporation (Class B)",
+    "sector": "Communication Services",
+    "industry": "Broadcasting",
+    "exchange": "NASDAQ",
+    "cik": "0001754301",
+    "isREIT": false
+  },
+  {
+    "ticker": "BEN",
+    "name": "Franklin Resources",
+    "sector": "Financials",
+    "industry": "Asset Management & Custody Banks",
+    "exchange": "NYSE",
+    "cik": "0000038777",
+    "isREIT": false
+  },
+  {
+    "ticker": "FCX",
+    "name": "Freeport-McMoRan",
+    "sector": "Materials",
+    "industry": "Copper",
+    "exchange": "NYSE",
+    "cik": "0000831259",
+    "isREIT": false
+  },
+  {
+    "ticker": "GRMN",
+    "name": "Garmin",
+    "sector": "Consumer Discretionary",
+    "industry": "Consumer Electronics",
+    "exchange": "NYSE",
+    "cik": "0001121788",
+    "isREIT": false
+  },
+  {
+    "ticker": "IT",
+    "name": "Gartner",
+    "sector": "Information Technology",
+    "industry": "IT Consulting & Other Services",
+    "exchange": "NYSE",
+    "cik": "0000749251",
+    "isREIT": false
+  },
+  {
+    "ticker": "GE",
+    "name": "GE Aerospace",
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "exchange": "NYSE",
+    "cik": "0000040545",
+    "isREIT": false
+  },
+  {
+    "ticker": "GEHC",
+    "name": "GE HealthCare",
+    "sector": "Health Care",
+    "industry": "Health Care Equipment",
+    "exchange": "NASDAQ",
+    "cik": "0001932393",
+    "isREIT": false
+  },
+  {
+    "ticker": "GEV",
+    "name": "GE Vernova",
+    "sector": "Industrials",
+    "industry": "Heavy Electrical Equipment",
+    "exchange": "NYSE",
+    "cik": "0001996810",
+    "isREIT": false
+  },
+  {
+    "ticker": "GEN",
+    "name": "Gen Digital",
+    "sector": "Information Technology",
+    "industry": "Systems Software",
+    "exchange": "NASDAQ",
+    "cik": "0000849399",
+    "isREIT": false
+  },
+  {
+    "ticker": "GNRC",
+    "name": "Generac",
+    "sector": "Industrials",
+    "industry": "Heavy Electrical Equipment",
+    "exchange": "NYSE",
+    "cik": "0001474735",
+    "isREIT": false
+  },
+  {
+    "ticker": "GD",
+    "name": "General Dynamics",
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "exchange": "NYSE",
+    "cik": "0000040533",
+    "isREIT": false
+  },
+  {
+    "ticker": "GIS",
+    "name": "General Mills",
+    "sector": "Consumer Staples",
+    "industry": "Packaged Foods & Meats",
+    "exchange": "NYSE",
+    "cik": "0000040704",
+    "isREIT": false
+  },
+  {
+    "ticker": "GM",
+    "name": "General Motors",
+    "sector": "Consumer Discretionary",
+    "industry": "Automobile Manufacturers",
+    "exchange": "NYSE",
+    "cik": "0001467858",
+    "isREIT": false
+  },
+  {
+    "ticker": "GPC",
+    "name": "Genuine Parts Company",
+    "sector": "Consumer Discretionary",
+    "industry": "Distributors",
+    "exchange": "NYSE",
+    "cik": "0000040987",
+    "isREIT": false
+  },
+  {
+    "ticker": "GILD",
+    "name": "Gilead Sciences",
+    "sector": "Health Care",
+    "industry": "Biotechnology",
+    "exchange": "NASDAQ",
+    "cik": "0000882095",
+    "isREIT": false
+  },
+  {
+    "ticker": "GPN",
+    "name": "Global Payments",
+    "sector": "Financials",
+    "industry": "Transaction & Payment Processing Services",
+    "exchange": "NYSE",
+    "cik": "0001123360",
+    "isREIT": false
+  },
+  {
+    "ticker": "GL",
+    "name": "Globe Life",
+    "sector": "Financials",
+    "industry": "Life & Health Insurance",
+    "exchange": "NYSE",
+    "cik": "0000320335",
+    "isREIT": false
+  },
+  {
+    "ticker": "GDDY",
+    "name": "GoDaddy",
+    "sector": "Information Technology",
+    "industry": "Internet Services & Infrastructure",
+    "exchange": "NYSE",
+    "cik": "0001609711",
+    "isREIT": false
+  },
+  {
+    "ticker": "GS",
+    "name": "Goldman Sachs",
+    "sector": "Financials",
+    "industry": "Investment Banking & Brokerage",
+    "exchange": "NYSE",
+    "cik": "0000886982",
+    "isREIT": false
+  },
+  {
+    "ticker": "HAL",
+    "name": "Halliburton",
+    "sector": "Energy",
+    "industry": "Oil & Gas Equipment & Services",
+    "exchange": "NYSE",
+    "cik": "0000045012",
+    "isREIT": false
+  },
+  {
+    "ticker": "HIG",
+    "name": "Hartford (The)",
+    "sector": "Financials",
+    "industry": "Property & Casualty Insurance",
+    "exchange": "NYSE",
+    "cik": "0000874766",
+    "isREIT": false
+  },
+  {
+    "ticker": "HAS",
+    "name": "Hasbro",
+    "sector": "Consumer Discretionary",
+    "industry": "Leisure Products",
+    "exchange": "NASDAQ",
+    "cik": "0000046080",
+    "isREIT": false
+  },
+  {
+    "ticker": "HCA",
+    "name": "HCA Healthcare",
+    "sector": "Health Care",
+    "industry": "Health Care Facilities",
+    "exchange": "NYSE",
+    "cik": "0000860730",
+    "isREIT": false
+  },
+  {
+    "ticker": "DOC",
+    "name": "Healthpeak Properties",
+    "sector": "Real Estate",
+    "industry": "Health Care REITs",
+    "exchange": "NYSE",
+    "cik": "0000765880",
+    "isREIT": true
+  },
+  {
+    "ticker": "HSIC",
+    "name": "Henry Schein",
+    "sector": "Health Care",
+    "industry": "Health Care Distributors",
+    "exchange": "NASDAQ",
+    "cik": "0001000228",
+    "isREIT": false
+  },
+  {
+    "ticker": "HSY",
+    "name": "Hershey Company (The)",
+    "sector": "Consumer Staples",
+    "industry": "Packaged Foods & Meats",
+    "exchange": "NYSE",
+    "cik": "0000047111",
+    "isREIT": false
+  },
+  {
+    "ticker": "HPE",
+    "name": "Hewlett Packard Enterprise",
+    "sector": "Information Technology",
+    "industry": "Technology Hardware, Storage & Peripherals",
+    "exchange": "NYSE",
+    "cik": "0001645590",
+    "isREIT": false
+  },
+  {
+    "ticker": "HLT",
+    "name": "Hilton Worldwide",
+    "sector": "Consumer Discretionary",
+    "industry": "Hotels, Resorts & Cruise Lines",
+    "exchange": "NYSE",
+    "cik": "0001585689",
+    "isREIT": false
+  },
+  {
+    "ticker": "HD",
+    "name": "Home Depot (The)",
+    "sector": "Consumer Discretionary",
+    "industry": "Home Improvement Retail",
+    "exchange": "NYSE",
+    "cik": "0000354950",
+    "isREIT": false
+  },
+  {
+    "ticker": "HONA",
+    "name": "Honeywell Aerospace",
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "exchange": "NASDAQ",
+    "cik": "0002089271",
+    "isREIT": false
+  },
+  {
+    "ticker": "HON",
+    "name": "Honeywell Technologies",
+    "sector": "Industrials",
+    "industry": "Industrial Conglomerates",
+    "exchange": "NASDAQ",
+    "cik": "0000773840",
+    "isREIT": false
+  },
+  {
+    "ticker": "HRL",
+    "name": "Hormel Foods",
+    "sector": "Consumer Staples",
+    "industry": "Packaged Foods & Meats",
+    "exchange": "NYSE",
+    "cik": "0000048465",
+    "isREIT": false
+  },
+  {
+    "ticker": "HST",
+    "name": "Host Hotels & Resorts",
+    "sector": "Real Estate",
+    "industry": "Hotel & Resort REITs",
+    "exchange": "NASDAQ",
+    "cik": "0001070750",
+    "isREIT": true
+  },
+  {
+    "ticker": "HWM",
+    "name": "Howmet Aerospace",
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "exchange": "NYSE",
+    "cik": "0000004281",
+    "isREIT": false
+  },
+  {
+    "ticker": "HPQ",
+    "name": "HP Inc.",
+    "sector": "Information Technology",
+    "industry": "Technology Hardware, Storage & Peripherals",
+    "exchange": "NYSE",
+    "cik": "0000047217",
+    "isREIT": false
+  },
+  {
+    "ticker": "HUBB",
+    "name": "Hubbell Incorporated",
+    "sector": "Industrials",
+    "industry": "Industrial Machinery & Supplies & Components",
+    "exchange": "NYSE",
+    "cik": "0000048898",
+    "isREIT": false
+  },
+  {
+    "ticker": "HUM",
+    "name": "Humana",
+    "sector": "Health Care",
+    "industry": "Managed Health Care",
+    "exchange": "NYSE",
+    "cik": "0000049071",
+    "isREIT": false
+  },
+  {
+    "ticker": "HBAN",
+    "name": "Huntington Bancshares",
+    "sector": "Financials",
+    "industry": "Regional Banks",
+    "exchange": "NASDAQ",
+    "cik": "0000049196",
+    "isREIT": false
+  },
+  {
+    "ticker": "HII",
+    "name": "Huntington Ingalls Industries",
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "exchange": "NYSE",
+    "cik": "0001501585",
+    "isREIT": false
+  },
+  {
+    "ticker": "IBM",
+    "name": "IBM",
+    "sector": "Information Technology",
+    "industry": "IT Consulting & Other Services",
+    "exchange": "NYSE",
+    "cik": "0000051143",
+    "isREIT": false
+  },
+  {
+    "ticker": "IEX",
+    "name": "IDEX Corporation",
+    "sector": "Industrials",
+    "industry": "Industrial Machinery & Supplies & Components",
+    "exchange": "NYSE",
+    "cik": "0000832101",
+    "isREIT": false
+  },
+  {
+    "ticker": "IDXX",
+    "name": "Idexx Laboratories",
+    "sector": "Health Care",
+    "industry": "Health Care Equipment",
+    "exchange": "NASDAQ",
+    "cik": "0000874716",
+    "isREIT": false
+  },
+  {
+    "ticker": "ITW",
+    "name": "Illinois Tool Works",
+    "sector": "Industrials",
+    "industry": "Industrial Machinery & Supplies & Components",
+    "exchange": "NYSE",
+    "cik": "0000049826",
+    "isREIT": false
+  },
+  {
+    "ticker": "ILMN",
+    "name": "Illumina, Inc.",
+    "sector": "Health Care",
+    "industry": "Life Sciences Tools & Services",
+    "exchange": "NASDAQ",
+    "cik": "0001110803",
+    "isREIT": false
+  },
+  {
+    "ticker": "INCY",
+    "name": "Incyte",
+    "sector": "Health Care",
+    "industry": "Biotechnology",
+    "exchange": "NASDAQ",
+    "cik": "0000879169",
+    "isREIT": false
+  },
+  {
+    "ticker": "IR",
+    "name": "Ingersoll Rand",
+    "sector": "Industrials",
+    "industry": "Industrial Machinery & Supplies & Components",
+    "exchange": "NYSE",
+    "cik": "0001699150",
+    "isREIT": false
+  },
+  {
+    "ticker": "PODD",
+    "name": "Insulet Corporation",
+    "sector": "Health Care",
+    "industry": "Health Care Equipment",
+    "exchange": "NASDAQ",
+    "cik": "0001145197",
+    "isREIT": false
+  },
+  {
+    "ticker": "INTC",
+    "name": "Intel",
+    "sector": "Information Technology",
+    "industry": "Semiconductors",
+    "exchange": "NASDAQ",
+    "cik": "0000050863",
+    "isREIT": false
+  },
+  {
+    "ticker": "IBKR",
+    "name": "Interactive Brokers",
+    "sector": "Financials",
+    "industry": "Investment Banking & Brokerage",
+    "exchange": "NASDAQ",
+    "cik": "0001381197",
+    "isREIT": false
+  },
+  {
+    "ticker": "ICE",
+    "name": "Intercontinental Exchange",
+    "sector": "Financials",
+    "industry": "Financial Exchanges & Data",
+    "exchange": "NYSE",
+    "cik": "0001571949",
+    "isREIT": false
+  },
+  {
+    "ticker": "IFF",
+    "name": "International Flavors & Fragrances",
+    "sector": "Materials",
+    "industry": "Specialty Chemicals",
+    "exchange": "NYSE",
+    "cik": "0000051253",
+    "isREIT": false
+  },
+  {
+    "ticker": "IP",
+    "name": "International Paper",
+    "sector": "Materials",
+    "industry": "Paper & Plastic Packaging Products & Materials",
+    "exchange": "NYSE",
+    "cik": "0000051434",
+    "isREIT": false
+  },
+  {
+    "ticker": "INTU",
+    "name": "Intuit",
+    "sector": "Information Technology",
+    "industry": "Application Software",
+    "exchange": "NASDAQ",
+    "cik": "0000896878",
+    "isREIT": false
+  },
+  {
+    "ticker": "ISRG",
+    "name": "Intuitive Surgical",
+    "sector": "Health Care",
+    "industry": "Health Care Equipment",
+    "exchange": "NASDAQ",
+    "cik": "0001035267",
+    "isREIT": false
+  },
+  {
+    "ticker": "IVZ",
+    "name": "Invesco",
+    "sector": "Financials",
+    "industry": "Asset Management & Custody Banks",
+    "exchange": "NYSE",
+    "cik": "0000914208",
+    "isREIT": false
+  },
+  {
+    "ticker": "INVH",
+    "name": "Invitation Homes",
+    "sector": "Real Estate",
+    "industry": "Single-Family Residential REITs",
+    "exchange": "NYSE",
+    "cik": "0001687229",
+    "isREIT": true
+  },
+  {
+    "ticker": "IQV",
+    "name": "IQVIA",
+    "sector": "Health Care",
+    "industry": "Life Sciences Tools & Services",
+    "exchange": "NYSE",
+    "cik": "0001478242",
+    "isREIT": false
+  },
+  {
+    "ticker": "IRM",
+    "name": "Iron Mountain",
+    "sector": "Real Estate",
+    "industry": "Other Specialized REITs",
+    "exchange": "NYSE",
+    "cik": "0001020569",
+    "isREIT": true
+  },
+  {
+    "ticker": "JBHT",
+    "name": "J.B. Hunt",
+    "sector": "Industrials",
+    "industry": "Cargo Ground Transportation",
+    "exchange": "NASDAQ",
+    "cik": "0000728535",
+    "isREIT": false
+  },
+  {
+    "ticker": "JBL",
+    "name": "Jabil",
+    "sector": "Information Technology",
+    "industry": "Electronic Manufacturing Services",
+    "exchange": "NYSE",
+    "cik": "0000898293",
+    "isREIT": false
+  },
+  {
+    "ticker": "JKHY",
+    "name": "Jack Henry & Associates",
+    "sector": "Financials",
+    "industry": "Transaction & Payment Processing Services",
+    "exchange": "NASDAQ",
+    "cik": "0000779152",
+    "isREIT": false
+  },
+  {
+    "ticker": "J",
+    "name": "Jacobs Solutions",
+    "sector": "Industrials",
+    "industry": "Construction & Engineering",
+    "exchange": "NYSE",
+    "cik": "0000052988",
+    "isREIT": false
+  },
+  {
+    "ticker": "JNJ",
+    "name": "Johnson & Johnson",
+    "sector": "Health Care",
+    "industry": "Pharmaceuticals",
+    "exchange": "NYSE",
+    "cik": "0000200406",
+    "isREIT": false
+  },
+  {
+    "ticker": "JCI",
+    "name": "Johnson Controls",
+    "sector": "Industrials",
+    "industry": "Building Products",
+    "exchange": "NYSE",
+    "cik": "0000833444",
+    "isREIT": false
+  },
+  {
+    "ticker": "JPM",
+    "name": "JPMorgan Chase",
+    "sector": "Financials",
+    "industry": "Diversified Banks",
+    "exchange": "NYSE",
+    "cik": "0000019617",
+    "isREIT": false
+  },
+  {
+    "ticker": "KVUE",
+    "name": "Kenvue|| Consumer Staples",
+    "sector": "Personal Care Products",
+    "industry": "[[Skillman, New Jersey]]",
+    "exchange": "NYSE",
+    "cik": "2022",
+    "isREIT": false
+  },
+  {
+    "ticker": "KDP",
+    "name": "Keurig Dr Pepper",
+    "sector": "Consumer Staples",
+    "industry": "Soft Drinks & Non-alcoholic Beverages",
+    "exchange": "NASDAQ",
+    "cik": "0001418135",
+    "isREIT": false
+  },
+  {
+    "ticker": "KEY",
+    "name": "KeyCorp",
+    "sector": "Financials",
+    "industry": "Regional Banks",
+    "exchange": "NYSE",
+    "cik": "0000091576",
+    "isREIT": false
+  },
+  {
+    "ticker": "KEYS",
+    "name": "Keysight Technologies",
+    "sector": "Information Technology",
+    "industry": "Electronic Equipment & Instruments",
+    "exchange": "NYSE",
+    "cik": "0001601046",
+    "isREIT": false
+  },
+  {
+    "ticker": "KMB",
+    "name": "Kimberly-Clark",
+    "sector": "Consumer Staples",
+    "industry": "Household Products",
+    "exchange": "NASDAQ",
+    "cik": "0000055785",
+    "isREIT": false
+  },
+  {
+    "ticker": "KIM",
+    "name": "Kimco Realty",
+    "sector": "Real Estate",
+    "industry": "Retail REITs",
+    "exchange": "NYSE",
+    "cik": "0000879101",
+    "isREIT": true
+  },
+  {
+    "ticker": "KMI",
+    "name": "Kinder Morgan",
+    "sector": "Energy",
+    "industry": "Oil & Gas Storage & Transportation",
+    "exchange": "NYSE",
+    "cik": "0001506307",
+    "isREIT": false
+  },
+  {
+    "ticker": "KKR",
+    "name": "KKR & Co.",
+    "sector": "Financials",
+    "industry": "Asset Management & Custody Banks",
+    "exchange": "NYSE",
+    "cik": "0001404912",
+    "isREIT": false
+  },
+  {
+    "ticker": "KLAC",
+    "name": "KLA Corporation",
+    "sector": "Information Technology",
+    "industry": "Semiconductor Materials & Equipment",
+    "exchange": "NASDAQ",
+    "cik": "0000319201",
+    "isREIT": false
+  },
+  {
+    "ticker": "KHC",
+    "name": "Kraft Heinz",
+    "sector": "Consumer Staples",
+    "industry": "Packaged Foods & Meats",
+    "exchange": "NYSE",
+    "cik": "0001637459",
+    "isREIT": false
+  },
+  {
+    "ticker": "KR",
+    "name": "Kroger",
+    "sector": "Consumer Staples",
+    "industry": "Food Retail",
+    "exchange": "NYSE",
+    "cik": "0000056873",
+    "isREIT": false
+  },
+  {
+    "ticker": "LHX",
+    "name": "L3Harris",
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "exchange": "NYSE",
+    "cik": "0000202058",
+    "isREIT": false
+  },
+  {
+    "ticker": "LH",
+    "name": "Labcorp",
+    "sector": "Health Care",
+    "industry": "Health Care Services",
+    "exchange": "NYSE",
+    "cik": "0000920148",
+    "isREIT": false
+  },
+  {
+    "ticker": "LRCX",
+    "name": "Lam Research",
+    "sector": "Information Technology",
+    "industry": "Semiconductor Materials & Equipment",
+    "exchange": "NASDAQ",
+    "cik": "0000707549",
+    "isREIT": false
+  },
+  {
+    "ticker": "LVS",
+    "name": "Las Vegas Sands",
+    "sector": "Consumer Discretionary",
+    "industry": "Casinos & Gaming",
+    "exchange": "NYSE",
+    "cik": "0001300514",
+    "isREIT": false
+  },
+  {
+    "ticker": "LDOS",
+    "name": "Leidos",
+    "sector": "Industrials",
+    "industry": "Diversified Support Services",
+    "exchange": "NYSE",
+    "cik": "0001336920",
+    "isREIT": false
+  },
+  {
+    "ticker": "LEN",
+    "name": "Lennar",
+    "sector": "Consumer Discretionary",
+    "industry": "Homebuilding",
+    "exchange": "NYSE",
+    "cik": "0000920760",
+    "isREIT": false
+  },
+  {
+    "ticker": "LII",
+    "name": "Lennox International",
+    "sector": "Industrials",
+    "industry": "Building Products",
+    "exchange": "NYSE",
+    "cik": "0001069202",
+    "isREIT": false
+  },
+  {
+    "ticker": "LLY",
+    "name": "Lilly (Eli)",
+    "sector": "Health Care",
+    "industry": "Pharmaceuticals",
+    "exchange": "NYSE",
+    "cik": "0000059478",
+    "isREIT": false
+  },
+  {
+    "ticker": "LIN",
+    "name": "Linde plc",
+    "sector": "Materials",
+    "industry": "Industrial Gases",
+    "exchange": "NASDAQ",
+    "cik": "0001707925",
+    "isREIT": false
+  },
+  {
+    "ticker": "LYV",
+    "name": "Live Nation Entertainment",
+    "sector": "Communication Services",
+    "industry": "Movies & Entertainment",
+    "exchange": "NYSE",
+    "cik": "0001335258",
+    "isREIT": false
+  },
+  {
+    "ticker": "LMT",
+    "name": "Lockheed Martin",
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "exchange": "NYSE",
+    "cik": "0000936468",
+    "isREIT": false
+  },
+  {
+    "ticker": "L",
+    "name": "Loews Corporation",
+    "sector": "Financials",
+    "industry": "Multi-line Insurance",
+    "exchange": "NYSE",
+    "cik": "0000060086",
+    "isREIT": false
+  },
+  {
+    "ticker": "LOW",
+    "name": "Lowe's",
+    "sector": "Consumer Discretionary",
+    "industry": "Home Improvement Retail",
+    "exchange": "NYSE",
+    "cik": "0000060667",
+    "isREIT": false
+  },
+  {
+    "ticker": "LULU",
+    "name": "Lululemon Athletica",
+    "sector": "Consumer Discretionary",
+    "industry": "Apparel, Accessories & Luxury Goods",
+    "exchange": "NASDAQ",
+    "cik": "0001397187",
+    "isREIT": false
+  },
+  {
+    "ticker": "LITE",
+    "name": "Lumentum",
+    "sector": "Information Technology",
+    "industry": "Communications Equipment",
+    "exchange": "NASDAQ",
+    "cik": "0001633978",
+    "isREIT": false
+  },
+  {
+    "ticker": "LYB",
+    "name": "LyondellBasell",
+    "sector": "Materials",
+    "industry": "Specialty Chemicals",
+    "exchange": "NYSE",
+    "cik": "0001489393",
+    "isREIT": false
+  },
+  {
+    "ticker": "MTB",
+    "name": "M&T Bank",
+    "sector": "Financials",
+    "industry": "Regional Banks",
+    "exchange": "NYSE",
+    "cik": "0000036270",
+    "isREIT": false
+  },
+  {
+    "ticker": "MPC",
+    "name": "Marathon Petroleum",
+    "sector": "Energy",
+    "industry": "Oil & Gas Refining & Marketing",
+    "exchange": "NYSE",
+    "cik": "0001510295",
+    "isREIT": false
+  },
+  {
+    "ticker": "MAR",
+    "name": "Marriott International",
+    "sector": "Consumer Discretionary",
+    "industry": "Hotels, Resorts & Cruise Lines",
+    "exchange": "NASDAQ",
+    "cik": "0001048286",
+    "isREIT": false
+  },
+  {
+    "ticker": "MRSH",
+    "name": "Marsh McLennan",
+    "sector": "Financials",
+    "industry": "Insurance Brokers",
+    "exchange": "NYSE",
+    "cik": "0000062709",
+    "isREIT": false
+  },
+  {
+    "ticker": "MLM",
+    "name": "Martin Marietta Materials",
+    "sector": "Materials",
+    "industry": "Construction Materials",
+    "exchange": "NYSE",
+    "cik": "0000916076",
+    "isREIT": false
+  },
+  {
+    "ticker": "MRVL",
+    "name": "Marvell Technology",
+    "sector": "Information Technology",
+    "industry": "Semiconductors",
+    "exchange": "NASDAQ",
+    "cik": "0001835632",
+    "isREIT": false
+  },
+  {
+    "ticker": "MAS",
+    "name": "Masco",
+    "sector": "Industrials",
+    "industry": "Building Products",
+    "exchange": "NYSE",
+    "cik": "0000062996",
+    "isREIT": false
+  },
+  {
+    "ticker": "MA",
+    "name": "Mastercard",
+    "sector": "Financials",
+    "industry": "Transaction & Payment Processing Services",
+    "exchange": "NYSE",
+    "cik": "0001141391",
+    "isREIT": false
+  },
+  {
+    "ticker": "MKC",
+    "name": "McCormick & Company",
+    "sector": "Consumer Staples",
+    "industry": "Packaged Foods & Meats",
+    "exchange": "NYSE",
+    "cik": "0000063754",
+    "isREIT": false
+  },
+  {
+    "ticker": "MCD",
+    "name": "McDonald's",
+    "sector": "Consumer Discretionary",
+    "industry": "Restaurants",
+    "exchange": "NYSE",
+    "cik": "0000063908",
+    "isREIT": false
+  },
+  {
+    "ticker": "MCK",
+    "name": "McKesson Corporation",
+    "sector": "Health Care",
+    "industry": "Health Care Distributors",
+    "exchange": "NYSE",
+    "cik": "0000927653",
+    "isREIT": false
+  },
+  {
+    "ticker": "MDT",
+    "name": "Medtronic",
+    "sector": "Health Care",
+    "industry": "Health Care Equipment",
+    "exchange": "NYSE",
+    "cik": "0001613103",
+    "isREIT": false
+  },
+  {
+    "ticker": "MRK",
+    "name": "Merck & Co.",
+    "sector": "Health Care",
+    "industry": "Pharmaceuticals",
+    "exchange": "NYSE",
+    "cik": "0000310158",
+    "isREIT": false
+  },
+  {
+    "ticker": "META",
+    "name": "Meta Platforms",
+    "sector": "Communication Services",
+    "industry": "Interactive Media & Services",
+    "exchange": "NASDAQ",
+    "cik": "0001326801",
+    "isREIT": false
+  },
+  {
+    "ticker": "MET",
+    "name": "MetLife",
+    "sector": "Financials",
+    "industry": "Life & Health Insurance",
+    "exchange": "NYSE",
+    "cik": "0001099219",
+    "isREIT": false
+  },
+  {
+    "ticker": "MTD",
+    "name": "Mettler Toledo",
+    "sector": "Health Care",
+    "industry": "Life Sciences Tools & Services",
+    "exchange": "NYSE",
+    "cik": "0001037646",
+    "isREIT": false
+  },
+  {
+    "ticker": "MGM",
+    "name": "MGM Resorts",
+    "sector": "Consumer Discretionary",
+    "industry": "Casinos & Gaming",
+    "exchange": "NYSE",
+    "cik": "0000789570",
+    "isREIT": false
+  },
+  {
+    "ticker": "MCHP",
+    "name": "Microchip Technology",
+    "sector": "Information Technology",
+    "industry": "Semiconductors",
+    "exchange": "NASDAQ",
+    "cik": "0000827054",
+    "isREIT": false
+  },
+  {
+    "ticker": "MU",
+    "name": "Micron Technology",
+    "sector": "Information Technology",
+    "industry": "Semiconductors",
+    "exchange": "NASDAQ",
+    "cik": "0000723125",
+    "isREIT": false
+  },
+  {
+    "ticker": "MSFT",
+    "name": "Microsoft",
+    "sector": "Information Technology",
+    "industry": "Systems Software",
+    "exchange": "NASDAQ",
+    "cik": "0000789019",
+    "isREIT": false
+  },
+  {
+    "ticker": "MAA",
+    "name": "Mid-America Apartment Communities",
+    "sector": "Real Estate",
+    "industry": "Multi-Family Residential REITs",
+    "exchange": "NYSE",
+    "cik": "0000912595",
+    "isREIT": true
+  },
+  {
+    "ticker": "MRNA",
+    "name": "Moderna",
+    "sector": "Health Care",
+    "industry": "Biotechnology",
+    "exchange": "NASDAQ",
+    "cik": "0001682852",
+    "isREIT": false
+  },
+  {
+    "ticker": "MDLZ",
+    "name": "Mondelez International",
+    "sector": "Consumer Staples",
+    "industry": "Packaged Foods & Meats",
+    "exchange": "NASDAQ",
+    "cik": "0001103982",
+    "isREIT": false
+  },
+  {
+    "ticker": "MPWR",
+    "name": "Monolithic Power Systems",
+    "sector": "Information Technology",
+    "industry": "Semiconductors",
+    "exchange": "NASDAQ",
+    "cik": "0001280452",
+    "isREIT": false
+  },
+  {
+    "ticker": "MNST",
+    "name": "Monster Beverage",
+    "sector": "Consumer Staples",
+    "industry": "Soft Drinks & Non-alcoholic Beverages",
+    "exchange": "NASDAQ",
+    "cik": "0000865752",
+    "isREIT": false
+  },
+  {
+    "ticker": "MCO",
+    "name": "Moody's Corporation",
+    "sector": "Financials",
+    "industry": "Financial Exchanges & Data",
+    "exchange": "NYSE",
+    "cik": "0001059556",
+    "isREIT": false
+  },
+  {
+    "ticker": "MS",
+    "name": "Morgan Stanley",
+    "sector": "Financials",
+    "industry": "Investment Banking & Brokerage",
+    "exchange": "NYSE",
+    "cik": "0000895421",
+    "isREIT": false
+  },
+  {
+    "ticker": "MOS",
+    "name": "Mosaic Company (The)",
+    "sector": "Materials",
+    "industry": "Fertilizers & Agricultural Chemicals",
+    "exchange": "NYSE",
+    "cik": "0001285785",
+    "isREIT": false
+  },
+  {
+    "ticker": "MSI",
+    "name": "Motorola Solutions",
+    "sector": "Information Technology",
+    "industry": "Communications Equipment",
+    "exchange": "NYSE",
+    "cik": "0000068505",
+    "isREIT": false
+  },
+  {
+    "ticker": "MSCI",
+    "name": "MSCI",
+    "sector": "Financials",
+    "industry": "Financial Exchanges & Data",
+    "exchange": "NYSE",
+    "cik": "0001408198",
+    "isREIT": false
+  },
+  {
+    "ticker": "NDAQ",
+    "name": "Nasdaq, Inc.",
+    "sector": "Financials",
+    "industry": "Financial Exchanges & Data",
+    "exchange": "NASDAQ",
+    "cik": "0001120193",
+    "isREIT": false
+  },
+  {
+    "ticker": "NTAP",
+    "name": "NetApp",
+    "sector": "Information Technology",
+    "industry": "Technology Hardware, Storage & Peripherals",
+    "exchange": "NASDAQ",
+    "cik": "0001002047",
+    "isREIT": false
+  },
+  {
+    "ticker": "NFLX",
+    "name": "Netflix",
+    "sector": "Communication Services",
+    "industry": "Movies & Entertainment",
+    "exchange": "NASDAQ",
+    "cik": "0001065280",
+    "isREIT": false
+  },
+  {
+    "ticker": "NEM",
+    "name": "Newmont",
+    "sector": "Materials",
+    "industry": "Gold",
+    "exchange": "NYSE",
+    "cik": "0001164727",
+    "isREIT": false
+  },
+  {
+    "ticker": "NWSA",
+    "name": "News Corp (Class A)",
+    "sector": "Communication Services",
+    "industry": "Publishing",
+    "exchange": "NASDAQ",
+    "cik": "0001564708",
+    "isREIT": false
+  },
+  {
+    "ticker": "NWS",
+    "name": "News Corp (Class B)",
+    "sector": "Communication Services",
+    "industry": "Publishing",
+    "exchange": "NASDAQ",
+    "cik": "0001564708",
+    "isREIT": false
+  },
+  {
+    "ticker": "NEE",
+    "name": "NextEra Energy",
+    "sector": "Utilities",
+    "industry": "Multi-Utilities",
+    "exchange": "NYSE",
+    "cik": "0000753308",
+    "isREIT": false
+  },
+  {
+    "ticker": "NKE",
+    "name": "Nike, Inc.",
+    "sector": "Consumer Discretionary",
+    "industry": "Apparel, Accessories & Luxury Goods",
+    "exchange": "NYSE",
+    "cik": "0000320187",
+    "isREIT": false
+  },
+  {
+    "ticker": "NI",
+    "name": "NiSource",
+    "sector": "Utilities",
+    "industry": "Multi-Utilities",
+    "exchange": "NYSE",
+    "cik": "0001111711",
+    "isREIT": false
+  },
+  {
+    "ticker": "NDSN",
+    "name": "Nordson Corporation",
+    "sector": "Industrials",
+    "industry": "Industrial Machinery & Supplies & Components",
+    "exchange": "NASDAQ",
+    "cik": "0000072331",
+    "isREIT": false
+  },
+  {
+    "ticker": "NSC",
+    "name": "Norfolk Southern",
+    "sector": "Industrials",
+    "industry": "Rail Transportation",
+    "exchange": "NYSE",
+    "cik": "0000702165",
+    "isREIT": false
+  },
+  {
+    "ticker": "NTRS",
+    "name": "Northern Trust",
+    "sector": "Financials",
+    "industry": "Asset Management & Custody Banks",
+    "exchange": "NASDAQ",
+    "cik": "0000073124",
+    "isREIT": false
+  },
+  {
+    "ticker": "NOC",
+    "name": "Northrop Grumman",
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "exchange": "NYSE",
+    "cik": "0001133421",
+    "isREIT": false
+  },
+  {
+    "ticker": "NCLH",
+    "name": "Norwegian Cruise Line Holdings",
+    "sector": "Consumer Discretionary",
+    "industry": "Hotels, Resorts & Cruise Lines",
+    "exchange": "NYSE",
+    "cik": "0001513761",
+    "isREIT": false
+  },
+  {
+    "ticker": "NRG",
+    "name": "NRG Energy",
+    "sector": "Utilities",
+    "industry": "Independent Power Producers & Energy Traders",
+    "exchange": "NYSE",
+    "cik": "0001013871",
+    "isREIT": false
+  },
+  {
+    "ticker": "NUE",
+    "name": "Nucor",
+    "sector": "Materials",
+    "industry": "Steel",
+    "exchange": "NYSE",
+    "cik": "0000073309",
+    "isREIT": false
+  },
+  {
+    "ticker": "NVDA",
+    "name": "Nvidia",
+    "sector": "Information Technology",
+    "industry": "Semiconductors",
+    "exchange": "NASDAQ",
+    "cik": "0001045810",
+    "isREIT": false
+  },
+  {
+    "ticker": "NVR",
+    "name": "NVR, Inc.",
+    "sector": "Consumer Discretionary",
+    "industry": "Homebuilding",
+    "exchange": "NYSE",
+    "cik": "0000906163",
+    "isREIT": false
+  },
+  {
+    "ticker": "NXPI",
+    "name": "NXP Semiconductors",
+    "sector": "Information Technology",
+    "industry": "Semiconductors",
+    "exchange": "NASDAQ",
+    "cik": "0001413447",
+    "isREIT": false
+  },
+  {
+    "ticker": "ORLY",
+    "name": "O'Reilly Automotive",
+    "sector": "Consumer Discretionary",
+    "industry": "Automotive Retail",
+    "exchange": "NASDAQ",
+    "cik": "0000898173",
+    "isREIT": false
+  },
+  {
+    "ticker": "OXY",
+    "name": "Occidental Petroleum",
+    "sector": "Energy",
+    "industry": "Oil & Gas Exploration & Production",
+    "exchange": "NYSE",
+    "cik": "0000797468",
+    "isREIT": false
+  },
+  {
+    "ticker": "ODFL",
+    "name": "Old Dominion",
+    "sector": "Industrials",
+    "industry": "Cargo Ground Transportation",
+    "exchange": "NASDAQ",
+    "cik": "0000878927",
+    "isREIT": false
+  },
+  {
+    "ticker": "OMC",
+    "name": "Omnicom Group",
+    "sector": "Communication Services",
+    "industry": "Advertising",
+    "exchange": "NYSE",
+    "cik": "0000029989",
+    "isREIT": false
+  },
+  {
+    "ticker": "ON",
+    "name": "ON Semiconductor",
+    "sector": "Information Technology",
+    "industry": "Semiconductors",
+    "exchange": "NASDAQ",
+    "cik": "0001097864",
+    "isREIT": false
+  },
+  {
+    "ticker": "OKE",
+    "name": "Oneok",
+    "sector": "Energy",
+    "industry": "Oil & Gas Storage & Transportation",
+    "exchange": "NYSE",
+    "cik": "0001039684",
+    "isREIT": false
+  },
+  {
+    "ticker": "ORCL",
+    "name": "Oracle Corporation",
+    "sector": "Information Technology",
+    "industry": "Application Software",
+    "exchange": "NYSE",
+    "cik": "0001341439",
+    "isREIT": false
+  },
+  {
+    "ticker": "OTIS",
+    "name": "Otis Worldwide",
+    "sector": "Industrials",
+    "industry": "Industrial Machinery & Supplies & Components",
+    "exchange": "NYSE",
+    "cik": "0001781335",
+    "isREIT": false
+  },
+  {
+    "ticker": "PCAR",
+    "name": "Paccar",
+    "sector": "Industrials",
+    "industry": "Construction Machinery & Heavy Transportation Equipment",
+    "exchange": "NASDAQ",
+    "cik": "0000075362",
+    "isREIT": false
+  },
+  {
+    "ticker": "PKG",
+    "name": "Packaging Corporation of America",
+    "sector": "Materials",
+    "industry": "Paper & Plastic Packaging Products & Materials",
+    "exchange": "NYSE",
+    "cik": "0000075677",
+    "isREIT": false
+  },
+  {
+    "ticker": "PLTR",
+    "name": "Palantir Technologies",
+    "sector": "Information Technology",
+    "industry": "Application Software",
+    "exchange": "NASDAQ",
+    "cik": "0001321655",
+    "isREIT": false
+  },
+  {
+    "ticker": "PANW",
+    "name": "Palo Alto Networks",
+    "sector": "Information Technology",
+    "industry": "Systems Software",
+    "exchange": "NASDAQ",
+    "cik": "0001327567",
+    "isREIT": false
+  },
+  {
+    "ticker": "PSKY",
+    "name": "Paramount Skydance Corporation",
+    "sector": "Communication Services",
+    "industry": "Movies & Entertainment",
+    "exchange": "NASDAQ",
+    "cik": "0002041610",
+    "isREIT": false
+  },
+  {
+    "ticker": "PH",
+    "name": "Parker Hannifin",
+    "sector": "Industrials",
+    "industry": "Industrial Machinery & Supplies & Components",
+    "exchange": "NYSE",
+    "cik": "0000076334",
+    "isREIT": false
+  },
+  {
+    "ticker": "PAYX",
+    "name": "Paychex",
+    "sector": "Industrials",
+    "industry": "Human Resource & Employment Services",
+    "exchange": "NASDAQ",
+    "cik": "0000723531",
+    "isREIT": false
+  },
+  {
+    "ticker": "PYPL",
+    "name": "PayPal",
+    "sector": "Financials",
+    "industry": "Transaction & Payment Processing Services",
+    "exchange": "NASDAQ",
+    "cik": "0001633917",
+    "isREIT": false
+  },
+  {
+    "ticker": "PNR",
+    "name": "Pentair",
+    "sector": "Industrials",
+    "industry": "Industrial Machinery & Supplies & Components",
+    "exchange": "NYSE",
+    "cik": "0000077360",
+    "isREIT": false
+  },
+  {
+    "ticker": "PEP",
+    "name": "PepsiCo",
+    "sector": "Consumer Staples",
+    "industry": "Soft Drinks & Non-alcoholic Beverages",
+    "exchange": "NASDAQ",
+    "cik": "0000077476",
+    "isREIT": false
+  },
+  {
+    "ticker": "PFE",
+    "name": "Pfizer",
+    "sector": "Health Care",
+    "industry": "Pharmaceuticals",
+    "exchange": "NYSE",
+    "cik": "0000078003",
+    "isREIT": false
+  },
+  {
+    "ticker": "PCG",
+    "name": "PG&E Corporation",
+    "sector": "Utilities",
+    "industry": "Multi-Utilities",
+    "exchange": "NYSE",
+    "cik": "0001004980",
+    "isREIT": false
+  },
+  {
+    "ticker": "PM",
+    "name": "Philip Morris International",
+    "sector": "Consumer Staples",
+    "industry": "Tobacco",
+    "exchange": "NYSE",
+    "cik": "0001413329",
+    "isREIT": false
+  },
+  {
+    "ticker": "PSX",
+    "name": "Phillips 66",
+    "sector": "Energy",
+    "industry": "Oil & Gas Refining & Marketing",
+    "exchange": "NYSE",
+    "cik": "0001534701",
+    "isREIT": false
+  },
+  {
+    "ticker": "PNW",
+    "name": "Pinnacle West Capital",
+    "sector": "Utilities",
+    "industry": "Multi-Utilities",
+    "exchange": "NYSE",
+    "cik": "0000764622",
+    "isREIT": false
+  },
+  {
+    "ticker": "PNC",
+    "name": "PNC Financial Services",
+    "sector": "Financials",
+    "industry": "Diversified Banks",
+    "exchange": "NYSE",
+    "cik": "0000713676",
+    "isREIT": false
+  },
+  {
+    "ticker": "PPG",
+    "name": "PPG Industries",
+    "sector": "Materials",
+    "industry": "Specialty Chemicals",
+    "exchange": "NYSE",
+    "cik": "0000079879",
+    "isREIT": false
+  },
+  {
+    "ticker": "PPL",
+    "name": "PPL Corporation",
+    "sector": "Utilities",
+    "industry": "Electric Utilities",
+    "exchange": "NYSE",
+    "cik": "0000922224",
+    "isREIT": false
+  },
+  {
+    "ticker": "PFG",
+    "name": "Principal Financial Group",
+    "sector": "Financials",
+    "industry": "Life & Health Insurance",
+    "exchange": "NASDAQ",
+    "cik": "0001126328",
+    "isREIT": false
+  },
+  {
+    "ticker": "PG",
+    "name": "Procter & Gamble",
+    "sector": "Consumer Staples",
+    "industry": "Personal Care Products",
+    "exchange": "NYSE",
+    "cik": "0000080424",
+    "isREIT": false
+  },
+  {
+    "ticker": "PGR",
+    "name": "Progressive Corporation",
+    "sector": "Financials",
+    "industry": "Property & Casualty Insurance",
+    "exchange": "NYSE",
+    "cik": "0000080661",
+    "isREIT": false
+  },
+  {
+    "ticker": "PLD",
+    "name": "Prologis",
+    "sector": "Real Estate",
+    "industry": "Industrial REITs",
+    "exchange": "NYSE",
+    "cik": "0001045609",
+    "isREIT": true
+  },
+  {
+    "ticker": "PRU",
+    "name": "Prudential Financial",
+    "sector": "Financials",
+    "industry": "Life & Health Insurance",
+    "exchange": "NYSE",
+    "cik": "0001137774",
+    "isREIT": false
+  },
+  {
+    "ticker": "PEG",
+    "name": "Public Service Enterprise Group",
+    "sector": "Utilities",
+    "industry": "Electric Utilities",
+    "exchange": "NYSE",
+    "cik": "0000788784",
+    "isREIT": false
+  },
+  {
+    "ticker": "PTC",
+    "name": "PTC Inc.",
+    "sector": "Information Technology",
+    "industry": "Application Software",
+    "exchange": "NASDAQ",
+    "cik": "0000857005",
+    "isREIT": false
+  },
+  {
+    "ticker": "PSA",
+    "name": "Public Storage",
+    "sector": "Real Estate",
+    "industry": "Self-Storage REITs",
+    "exchange": "NYSE",
+    "cik": "0001393311",
+    "isREIT": true
+  },
+  {
+    "ticker": "PHM",
+    "name": "PulteGroup",
+    "sector": "Consumer Discretionary",
+    "industry": "Homebuilding",
+    "exchange": "NYSE",
+    "cik": "0000822416",
+    "isREIT": false
+  },
+  {
+    "ticker": "PWR",
+    "name": "Quanta Services",
+    "sector": "Industrials",
+    "industry": "Construction & Engineering",
+    "exchange": "NYSE",
+    "cik": "0001050915",
+    "isREIT": false
+  },
+  {
+    "ticker": "QCOM",
+    "name": "Qualcomm",
+    "sector": "Information Technology",
+    "industry": "Semiconductors",
+    "exchange": "NASDAQ",
+    "cik": "0000804328",
+    "isREIT": false
+  },
+  {
+    "ticker": "DGX",
+    "name": "Quest Diagnostics",
+    "sector": "Health Care",
+    "industry": "Health Care Services",
+    "exchange": "NYSE",
+    "cik": "0001022079",
+    "isREIT": false
+  },
+  {
+    "ticker": "Q",
+    "name": "Qnity Electronics",
+    "sector": "Information Technology",
+    "industry": "Semiconductor Materials & Equipment",
+    "exchange": "NYSE",
+    "cik": "0002058873",
+    "isREIT": false
+  },
+  {
+    "ticker": "RL",
+    "name": "Ralph Lauren Corporation",
+    "sector": "Consumer Discretionary",
+    "industry": "Apparel, Accessories & Luxury Goods",
+    "exchange": "NYSE",
+    "cik": "0001037038",
+    "isREIT": false
+  },
+  {
+    "ticker": "RJF",
+    "name": "Raymond James Financial",
+    "sector": "Financials",
+    "industry": "Investment Banking & Brokerage",
+    "exchange": "NYSE",
+    "cik": "0000720005",
+    "isREIT": false
+  },
+  {
+    "ticker": "RDDT",
+    "name": "Reddit",
+    "sector": "Communication Services",
+    "industry": "Interactive Media & Services",
+    "exchange": "NYSE",
+    "cik": "0001713445",
+    "isREIT": false
+  },
+  {
+    "ticker": "RTX",
+    "name": "RTX Corporation",
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "exchange": "NYSE",
+    "cik": "0000101829",
+    "isREIT": false
+  },
+  {
+    "ticker": "O",
+    "name": "Realty Income",
+    "sector": "Real Estate",
+    "industry": "Retail REITs",
+    "exchange": "NYSE",
+    "cik": "0000726728",
+    "isREIT": true
+  },
+  {
+    "ticker": "REG",
+    "name": "Regency Centers",
+    "sector": "Real Estate",
+    "industry": "Retail REITs",
+    "exchange": "NASDAQ",
+    "cik": "0000910606",
+    "isREIT": true
+  },
+  {
+    "ticker": "REGN",
+    "name": "Regeneron Pharmaceuticals",
+    "sector": "Health Care",
+    "industry": "Biotechnology",
+    "exchange": "NASDAQ",
+    "cik": "0000872589",
+    "isREIT": false
+  },
+  {
+    "ticker": "RF",
+    "name": "Regions Financial Corporation",
+    "sector": "Financials",
+    "industry": "Regional Banks",
+    "exchange": "NYSE",
+    "cik": "0001281761",
+    "isREIT": false
+  },
+  {
+    "ticker": "RSG",
+    "name": "Republic Services",
+    "sector": "Industrials",
+    "industry": "Environmental & Facilities Services",
+    "exchange": "NYSE",
+    "cik": "0001060391",
+    "isREIT": false
+  },
+  {
+    "ticker": "RMD",
+    "name": "ResMed|",
+    "sector": "Health Care",
+    "industry": "Health Care Equipment",
+    "exchange": "NYSE",
+    "cik": "0000943819",
+    "isREIT": false
+  },
+  {
+    "ticker": "RVTY",
+    "name": "Revvity",
+    "sector": "Health Care",
+    "industry": "Health Care Equipment",
+    "exchange": "NYSE",
+    "cik": "0000031791",
+    "isREIT": false
+  },
+  {
+    "ticker": "HOOD",
+    "name": "Robinhood Markets",
+    "sector": "Financials",
+    "industry": "Investment Banking & Brokerage",
+    "exchange": "NASDAQ",
+    "cik": "0001783879",
+    "isREIT": false
+  },
+  {
+    "ticker": "ROK",
+    "name": "Rockwell Automation",
+    "sector": "Industrials",
+    "industry": "Electrical Components & Equipment",
+    "exchange": "NYSE",
+    "cik": "0001024478",
+    "isREIT": false
+  },
+  {
+    "ticker": "ROL",
+    "name": "Rollins, Inc.",
+    "sector": "Industrials",
+    "industry": "Environmental & Facilities Services",
+    "exchange": "NYSE",
+    "cik": "0000084839",
+    "isREIT": false
+  },
+  {
+    "ticker": "ROP",
+    "name": "Roper Technologies",
+    "sector": "Information Technology",
+    "industry": "Electronic Equipment & Instruments",
+    "exchange": "NASDAQ",
+    "cik": "0000882835",
+    "isREIT": false
+  },
+  {
+    "ticker": "ROST",
+    "name": "Ross Stores",
+    "sector": "Consumer Discretionary",
+    "industry": "Apparel Retail",
+    "exchange": "NASDAQ",
+    "cik": "0000745732",
+    "isREIT": false
+  },
+  {
+    "ticker": "RCL",
+    "name": "Royal Caribbean Group",
+    "sector": "Consumer Discretionary",
+    "industry": "Hotels, Resorts & Cruise Lines",
+    "exchange": "NYSE",
+    "cik": "0000884887",
+    "isREIT": false
+  },
+  {
+    "ticker": "SPGI",
+    "name": "S&P Global",
+    "sector": "Financials",
+    "industry": "Financial Exchanges & Data",
+    "exchange": "NYSE",
+    "cik": "0000064040",
+    "isREIT": false
+  },
+  {
+    "ticker": "CRM",
+    "name": "Salesforce",
+    "sector": "Information Technology",
+    "industry": "Application Software",
+    "exchange": "NYSE",
+    "cik": "0001108524",
+    "isREIT": false
+  },
+  {
+    "ticker": "SNDK",
+    "name": "Sandisk",
+    "sector": "Information Technology",
+    "industry": "Technology Hardware, Storage & Peripherals",
+    "exchange": "NASDAQ",
+    "cik": "0002023554",
+    "isREIT": false
+  },
+  {
+    "ticker": "SBAC",
+    "name": "SBA Communications",
+    "sector": "Real Estate",
+    "industry": "Telecom Tower REITs",
+    "exchange": "NASDAQ",
+    "cik": "0001034054",
+    "isREIT": true
+  },
+  {
+    "ticker": "SLB",
+    "name": "Schlumberger",
+    "sector": "Energy",
+    "industry": "Oil & Gas Equipment & Services",
+    "exchange": "NYSE",
+    "cik": "0000087347",
+    "isREIT": false
+  },
+  {
+    "ticker": "STX",
+    "name": "Seagate Technology",
+    "sector": "Information Technology",
+    "industry": "Technology Hardware, Storage & Peripherals",
+    "exchange": "NASDAQ",
+    "cik": "0001137789",
+    "isREIT": false
+  },
+  {
+    "ticker": "SRE",
+    "name": "Sempra",
+    "sector": "Utilities",
+    "industry": "Multi-Utilities",
+    "exchange": "NYSE",
+    "cik": "0001032208",
+    "isREIT": false
+  },
+  {
+    "ticker": "NOW",
+    "name": "ServiceNow",
+    "sector": "Information Technology",
+    "industry": "Systems Software",
+    "exchange": "NYSE",
+    "cik": "0001373715",
+    "isREIT": false
+  },
+  {
+    "ticker": "SHW",
+    "name": "Sherwin-Williams",
+    "sector": "Materials",
+    "industry": "Specialty Chemicals",
+    "exchange": "NYSE",
+    "cik": "0000089800",
+    "isREIT": false
+  },
+  {
+    "ticker": "SPG",
+    "name": "Simon Property Group",
+    "sector": "Real Estate",
+    "industry": "Retail REITs",
+    "exchange": "NYSE",
+    "cik": "0001063761",
+    "isREIT": true
+  },
+  {
+    "ticker": "SWKS",
+    "name": "Skyworks Solutions",
+    "sector": "Information Technology",
+    "industry": "Semiconductors",
+    "exchange": "NASDAQ",
+    "cik": "0000004127",
+    "isREIT": false
+  },
+  {
+    "ticker": "SJM",
+    "name": "J.M. Smucker Company (The)",
+    "sector": "Consumer Staples",
+    "industry": "Packaged Foods & Meats",
+    "exchange": "NYSE",
+    "cik": "0000091419",
+    "isREIT": false
+  },
+  {
+    "ticker": "SW",
+    "name": "Smurfit Westrock",
+    "sector": "Materials",
+    "industry": "Paper & Plastic Packaging Products & Materials",
+    "exchange": "NYSE",
+    "cik": "0002005951",
+    "isREIT": false
+  },
+  {
+    "ticker": "SNA",
+    "name": "Snap-on",
+    "sector": "Industrials",
+    "industry": "Industrial Machinery & Supplies & Components",
+    "exchange": "NYSE",
+    "cik": "0000091440",
+    "isREIT": false
+  },
+  {
+    "ticker": "SOLV",
+    "name": "Solventum",
+    "sector": "Health Care",
+    "industry": "Health Care Technology",
+    "exchange": "NYSE",
+    "cik": "0001964738",
+    "isREIT": false
+  },
+  {
+    "ticker": "SO",
+    "name": "Southern Company",
+    "sector": "Utilities",
+    "industry": "Electric Utilities",
+    "exchange": "NYSE",
+    "cik": "0000092122",
+    "isREIT": false
+  },
+  {
+    "ticker": "LUV",
+    "name": "Southwest Airlines",
+    "sector": "Industrials",
+    "industry": "Passenger Airlines",
+    "exchange": "NYSE",
+    "cik": "0000092380",
+    "isREIT": false
+  },
+  {
+    "ticker": "SWK",
+    "name": "Stanley Black & Decker",
+    "sector": "Industrials",
+    "industry": "Industrial Machinery & Supplies & Components",
+    "exchange": "NYSE",
+    "cik": "0000093556",
+    "isREIT": false
+  },
+  {
+    "ticker": "SBUX",
+    "name": "Starbucks",
+    "sector": "Consumer Discretionary",
+    "industry": "Restaurants",
+    "exchange": "NASDAQ",
+    "cik": "0000829224",
+    "isREIT": false
+  },
+  {
+    "ticker": "STT",
+    "name": "State Street Corporation",
+    "sector": "Financials",
+    "industry": "Asset Management & Custody Banks",
+    "exchange": "NYSE",
+    "cik": "0000093751",
+    "isREIT": false
+  },
+  {
+    "ticker": "STLD",
+    "name": "Steel Dynamics",
+    "sector": "Materials",
+    "industry": "Steel",
+    "exchange": "NASDAQ",
+    "cik": "0001022671",
+    "isREIT": false
+  },
+  {
+    "ticker": "STE",
+    "name": "Steris",
+    "sector": "Health Care",
+    "industry": "Health Care Equipment",
+    "exchange": "NYSE",
+    "cik": "0001757898",
+    "isREIT": false
+  },
+  {
+    "ticker": "SYK",
+    "name": "Stryker Corporation",
+    "sector": "Health Care",
+    "industry": "Health Care Equipment",
+    "exchange": "NYSE",
+    "cik": "0000310764",
+    "isREIT": false
+  },
+  {
+    "ticker": "SMCI",
+    "name": "Supermicro",
+    "sector": "Information Technology",
+    "industry": "Technology Hardware, Storage & Peripherals",
+    "exchange": "NASDAQ",
+    "cik": "0001375365",
+    "isREIT": false
+  },
+  {
+    "ticker": "SYF",
+    "name": "Synchrony Financial",
+    "sector": "Financials",
+    "industry": "Consumer Finance",
+    "exchange": "NYSE",
+    "cik": "0001601712",
+    "isREIT": false
+  },
+  {
+    "ticker": "SNPS",
+    "name": "Synopsys",
+    "sector": "Information Technology",
+    "industry": "Application Software",
+    "exchange": "NASDAQ",
+    "cik": "0000883241",
+    "isREIT": false
+  },
+  {
+    "ticker": "SYY",
+    "name": "Sysco",
+    "sector": "Consumer Staples",
+    "industry": "Food Distributors",
+    "exchange": "NYSE",
+    "cik": "0000096021",
+    "isREIT": false
+  },
+  {
+    "ticker": "TMUS",
+    "name": "T-Mobile US",
+    "sector": "Communication Services",
+    "industry": "Wireless Telecommunication Services",
+    "exchange": "NASDAQ",
+    "cik": "0001283699",
+    "isREIT": false
+  },
+  {
+    "ticker": "TROW",
+    "name": "T. Rowe Price",
+    "sector": "Financials",
+    "industry": "Asset Management & Custody Banks",
+    "exchange": "NASDAQ",
+    "cik": "0001113169",
+    "isREIT": false
+  },
+  {
+    "ticker": "TTWO",
+    "name": "Take-Two Interactive",
+    "sector": "Communication Services",
+    "industry": "Interactive Home Entertainment",
+    "exchange": "NASDAQ",
+    "cik": "0000946581",
+    "isREIT": false
+  },
+  {
+    "ticker": "TPR",
+    "name": "Tapestry, Inc.",
+    "sector": "Consumer Discretionary",
+    "industry": "Apparel, Accessories & Luxury Goods",
+    "exchange": "NYSE",
+    "cik": "0001116132",
+    "isREIT": false
+  },
+  {
+    "ticker": "TRGP",
+    "name": "Targa Resources",
+    "sector": "Energy",
+    "industry": "Oil & Gas Storage & Transportation",
+    "exchange": "NYSE",
+    "cik": "0001389170",
+    "isREIT": false
+  },
+  {
+    "ticker": "TGT",
+    "name": "Target Corporation",
+    "sector": "Consumer Staples",
+    "industry": "Consumer Staples Merchandise Retail",
+    "exchange": "NYSE",
+    "cik": "0000027419",
+    "isREIT": false
+  },
+  {
+    "ticker": "TEL",
+    "name": "TE Connectivity",
+    "sector": "Information Technology",
+    "industry": "Electronic Manufacturing Services",
+    "exchange": "NYSE",
+    "cik": "0001385157",
+    "isREIT": false
+  },
+  {
+    "ticker": "TDY",
+    "name": "Teledyne Technologies",
+    "sector": "Information Technology",
+    "industry": "Electronic Equipment & Instruments",
+    "exchange": "NYSE",
+    "cik": "0001094285",
+    "isREIT": false
+  },
+  {
+    "ticker": "TER",
+    "name": "Teradyne",
+    "sector": "Information Technology",
+    "industry": "Semiconductor Materials & Equipment",
+    "exchange": "NASDAQ",
+    "cik": "0000097210",
+    "isREIT": false
+  },
+  {
+    "ticker": "TSLA",
+    "name": "Tesla, Inc.",
+    "sector": "Consumer Discretionary",
+    "industry": "Automobile Manufacturers",
+    "exchange": "NASDAQ",
+    "cik": "0001318605",
+    "isREIT": false
+  },
+  {
+    "ticker": "TXN",
+    "name": "Texas Instruments",
+    "sector": "Information Technology",
+    "industry": "Semiconductors",
+    "exchange": "NASDAQ",
+    "cik": "0000097476",
+    "isREIT": false
+  },
+  {
+    "ticker": "TPL",
+    "name": "Texas Pacific Land Corporation",
+    "sector": "Energy",
+    "industry": "Oil & Gas Exploration & Production",
+    "exchange": "NYSE",
+    "cik": "0001811074",
+    "isREIT": false
+  },
+  {
+    "ticker": "TXT",
+    "name": "Textron",
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "exchange": "NYSE",
+    "cik": "0000217346",
+    "isREIT": false
+  },
+  {
+    "ticker": "TMO",
+    "name": "Thermo Fisher Scientific",
+    "sector": "Health Care",
+    "industry": "Life Sciences Tools & Services",
+    "exchange": "NYSE",
+    "cik": "0000097745",
+    "isREIT": false
+  },
+  {
+    "ticker": "TJX",
+    "name": "TJX Companies",
+    "sector": "Consumer Discretionary",
+    "industry": "Apparel Retail",
+    "exchange": "NYSE",
+    "cik": "0000109198",
+    "isREIT": false
+  },
+  {
+    "ticker": "TKO",
+    "name": "TKO Group Holdings",
+    "sector": "Communication Services",
+    "industry": "Movies & Entertainment",
+    "exchange": "NYSE",
+    "cik": "0001973266",
+    "isREIT": false
+  },
+  {
+    "ticker": "TSCO",
+    "name": "Tractor Supply",
+    "sector": "Consumer Discretionary",
+    "industry": "Other Specialty Retail",
+    "exchange": "NASDAQ",
+    "cik": "0000916365",
+    "isREIT": false
+  },
+  {
+    "ticker": "TT",
+    "name": "Trane Technologies",
+    "sector": "Industrials",
+    "industry": "Building Products",
+    "exchange": "NYSE",
+    "cik": "0001466258",
+    "isREIT": false
+  },
+  {
+    "ticker": "TDG",
+    "name": "TransDigm Group",
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "exchange": "NYSE",
+    "cik": "0001260221",
+    "isREIT": false
+  },
+  {
+    "ticker": "TRV",
+    "name": "Travelers Companies (The)",
+    "sector": "Financials",
+    "industry": "Property & Casualty Insurance",
+    "exchange": "NYSE",
+    "cik": "0000086312",
+    "isREIT": false
+  },
+  {
+    "ticker": "TRMB",
+    "name": "Trimble Inc.",
+    "sector": "Information Technology",
+    "industry": "Application Software",
+    "exchange": "NASDAQ",
+    "cik": "0000864749",
+    "isREIT": false
+  },
+  {
+    "ticker": "TFC",
+    "name": "Truist Financial",
+    "sector": "Financials",
+    "industry": "Diversified Banks",
+    "exchange": "NYSE",
+    "cik": "0000092230",
+    "isREIT": false
+  },
+  {
+    "ticker": "TYL",
+    "name": "Tyler Technologies",
+    "sector": "Information Technology",
+    "industry": "Application Software",
+    "exchange": "NYSE",
+    "cik": "0000860731",
+    "isREIT": false
+  },
+  {
+    "ticker": "TSN",
+    "name": "Tyson Foods",
+    "sector": "Consumer Staples",
+    "industry": "Packaged Foods & Meats",
+    "exchange": "NYSE",
+    "cik": "0000100493",
+    "isREIT": false
+  },
+  {
+    "ticker": "USB",
+    "name": "U.S. Bancorp",
+    "sector": "Financials",
+    "industry": "Diversified Banks",
+    "exchange": "NYSE",
+    "cik": "0000036104",
+    "isREIT": false
+  },
+  {
+    "ticker": "UBER",
+    "name": "Uber",
+    "sector": "Industrials",
+    "industry": "Passenger Ground Transportation",
+    "exchange": "NYSE",
+    "cik": "0001543151",
+    "isREIT": false
+  },
+  {
+    "ticker": "UDR",
+    "name": "UDR, Inc.",
+    "sector": "Real Estate",
+    "industry": "Multi-Family Residential REITs",
+    "exchange": "NYSE",
+    "cik": "0000074208",
+    "isREIT": true
+  },
+  {
+    "ticker": "ULTA",
+    "name": "Ulta Beauty",
+    "sector": "Consumer Discretionary",
+    "industry": "Other Specialty Retail",
+    "exchange": "NASDAQ",
+    "cik": "0001403568",
+    "isREIT": false
+  },
+  {
+    "ticker": "UNP",
+    "name": "Union Pacific Corporation",
+    "sector": "Industrials",
+    "industry": "Rail Transportation",
+    "exchange": "NYSE",
+    "cik": "0000100885",
+    "isREIT": false
+  },
+  {
+    "ticker": "UAL",
+    "name": "United Airlines Holdings",
+    "sector": "Industrials",
+    "industry": "Passenger Airlines",
+    "exchange": "NASDAQ",
+    "cik": "0000100517",
+    "isREIT": false
+  },
+  {
+    "ticker": "UPS",
+    "name": "United Parcel Service",
+    "sector": "Industrials",
+    "industry": "Air Freight & Logistics",
+    "exchange": "NYSE",
+    "cik": "0001090727",
+    "isREIT": false
+  },
+  {
+    "ticker": "URI",
+    "name": "United Rentals",
+    "sector": "Industrials",
+    "industry": "Trading Companies & Distributors",
+    "exchange": "NYSE",
+    "cik": "0001067701",
+    "isREIT": false
+  },
+  {
+    "ticker": "UNH",
+    "name": "UnitedHealth Group",
+    "sector": "Health Care",
+    "industry": "Managed Health Care",
+    "exchange": "NYSE",
+    "cik": "0000731766",
+    "isREIT": false
+  },
+  {
+    "ticker": "UHS",
+    "name": "Universal Health Services",
+    "sector": "Health Care",
+    "industry": "Health Care Facilities",
+    "exchange": "NYSE",
+    "cik": "0000352915",
+    "isREIT": false
+  },
+  {
+    "ticker": "VLO",
+    "name": "Valero Energy",
+    "sector": "Energy",
+    "industry": "Oil & Gas Refining & Marketing",
+    "exchange": "NYSE",
+    "cik": "0001035002",
+    "isREIT": false
+  },
+  {
+    "ticker": "VEEV",
+    "name": "Veeva Systems",
+    "sector": "Health Care",
+    "industry": "Health Care Technology",
+    "exchange": "NYSE",
+    "cik": "0001393052",
+    "isREIT": false
+  },
+  {
+    "ticker": "VTR",
+    "name": "Ventas",
+    "sector": "Real Estate",
+    "industry": "Health Care REITs",
+    "exchange": "NYSE",
+    "cik": "0000740260",
+    "isREIT": true
+  },
+  {
+    "ticker": "VLTO",
+    "name": "Veralto",
+    "sector": "Industrials",
+    "industry": "Environmental & Facilities Services",
+    "exchange": "NYSE",
+    "cik": "0001967680",
+    "isREIT": false
+  },
+  {
+    "ticker": "VRSN",
+    "name": "Verisign",
+    "sector": "Information Technology",
+    "industry": "Internet Services & Infrastructure",
+    "exchange": "NASDAQ",
+    "cik": "0001014473",
+    "isREIT": false
+  },
+  {
+    "ticker": "VRSK",
+    "name": "Verisk Analytics",
+    "sector": "Industrials",
+    "industry": "Research & Consulting Services",
+    "exchange": "NASDAQ",
+    "cik": "0001442145",
+    "isREIT": false
+  },
+  {
+    "ticker": "VZ",
+    "name": "Verizon",
+    "sector": "Communication Services",
+    "industry": "Integrated Telecommunication Services",
+    "exchange": "NYSE",
+    "cik": "0000732712",
+    "isREIT": false
+  },
+  {
+    "ticker": "VRTX",
+    "name": "Vertex Pharmaceuticals",
+    "sector": "Health Care",
+    "industry": "Biotechnology",
+    "exchange": "NASDAQ",
+    "cik": "0000875320",
+    "isREIT": false
+  },
+  {
+    "ticker": "VRT",
+    "name": "Vertiv",
+    "sector": "Industrials",
+    "industry": "Electrical Components & Equipment",
+    "exchange": "NYSE",
+    "cik": "0001674101",
+    "isREIT": false
+  },
+  {
+    "ticker": "VTRS",
+    "name": "Viatris",
+    "sector": "Health Care",
+    "industry": "Pharmaceuticals",
+    "exchange": "NASDAQ",
+    "cik": "0001792044",
+    "isREIT": false
+  },
+  {
+    "ticker": "VICI",
+    "name": "Vici Properties",
+    "sector": "Real Estate",
+    "industry": "Hotel & Resort REITs",
+    "exchange": "NYSE",
+    "cik": "0001705696",
+    "isREIT": true
+  },
+  {
+    "ticker": "V",
+    "name": "Visa Inc.",
+    "sector": "Financials",
+    "industry": "Transaction & Payment Processing Services",
+    "exchange": "NYSE",
+    "cik": "0001403161",
+    "isREIT": false
+  },
+  {
+    "ticker": "VST",
+    "name": "Vistra Corp.",
+    "sector": "Utilities",
+    "industry": "Electric Utilities",
+    "exchange": "NYSE",
+    "cik": "0001692819",
+    "isREIT": false
+  },
+  {
+    "ticker": "VMRK",
+    "name": "Vivmark Residential",
+    "sector": "Real Estate",
+    "industry": "Multi-Family Residential REITs",
+    "exchange": "NYSE",
+    "cik": "0000906107",
+    "isREIT": true
+  },
+  {
+    "ticker": "VMC",
+    "name": "Vulcan Materials Company",
+    "sector": "Materials",
+    "industry": "Construction Materials",
+    "exchange": "NYSE",
+    "cik": "0001396009",
+    "isREIT": false
+  },
+  {
+    "ticker": "WRB",
+    "name": "W. R. Berkley Corporation",
+    "sector": "Financials",
+    "industry": "Property & Casualty Insurance",
+    "exchange": "NYSE",
+    "cik": "0000011544",
+    "isREIT": false
+  },
+  {
+    "ticker": "GWW",
+    "name": "W. W. Grainger",
+    "sector": "Industrials",
+    "industry": "Industrial Machinery & Supplies & Components",
+    "exchange": "NYSE",
+    "cik": "0000277135",
+    "isREIT": false
+  },
+  {
+    "ticker": "WAB",
+    "name": "Wabtec",
+    "sector": "Industrials",
+    "industry": "Construction Machinery & Heavy Transportation Equipment",
+    "exchange": "NYSE",
+    "cik": "0000943452",
+    "isREIT": false
+  },
+  {
+    "ticker": "WMT",
+    "name": "Walmart",
+    "sector": "Consumer Staples",
+    "industry": "Consumer Staples Merchandise Retail",
+    "exchange": "NASDAQ",
+    "cik": "0000104169",
+    "isREIT": false
+  },
+  {
+    "ticker": "DIS",
+    "name": "Walt Disney Company (The)",
+    "sector": "Communication Services",
+    "industry": "Movies & Entertainment",
+    "exchange": "NYSE",
+    "cik": "0001744489",
+    "isREIT": false
+  },
+  {
+    "ticker": "WBD",
+    "name": "Warner Bros. Discovery",
+    "sector": "Communication Services",
+    "industry": "Broadcasting",
+    "exchange": "NASDAQ",
+    "cik": "0001437107",
+    "isREIT": false
+  },
+  {
+    "ticker": "WM",
+    "name": "Waste Management",
+    "sector": "Industrials",
+    "industry": "Environmental & Facilities Services",
+    "exchange": "NYSE",
+    "cik": "0000823768",
+    "isREIT": false
+  },
+  {
+    "ticker": "WAT",
+    "name": "Waters Corporation",
+    "sector": "Health Care",
+    "industry": "Life Sciences Tools & Services",
+    "exchange": "NYSE",
+    "cik": "0001000697",
+    "isREIT": false
+  },
+  {
+    "ticker": "WEC",
+    "name": "WEC Energy Group",
+    "sector": "Utilities",
+    "industry": "Electric Utilities",
+    "exchange": "NYSE",
+    "cik": "0000783325",
+    "isREIT": false
+  },
+  {
+    "ticker": "WFC",
+    "name": "Wells Fargo",
+    "sector": "Financials",
+    "industry": "Diversified Banks",
+    "exchange": "NYSE",
+    "cik": "0000072971",
+    "isREIT": false
+  },
+  {
+    "ticker": "WELL",
+    "name": "Welltower",
+    "sector": "Real Estate",
+    "industry": "Health Care REITs",
+    "exchange": "NYSE",
+    "cik": "0000766704",
+    "isREIT": true
+  },
+  {
+    "ticker": "WST",
+    "name": "West Pharmaceutical Services",
+    "sector": "Health Care",
+    "industry": "Health Care Supplies",
+    "exchange": "NYSE",
+    "cik": "0000105770",
+    "isREIT": false
+  },
+  {
+    "ticker": "WDC",
+    "name": "Western Digital",
+    "sector": "Information Technology",
+    "industry": "Technology Hardware, Storage & Peripherals",
+    "exchange": "NASDAQ",
+    "cik": "0000106040",
+    "isREIT": false
+  },
+  {
+    "ticker": "WY",
+    "name": "Weyerhaeuser",
+    "sector": "Real Estate",
+    "industry": "Timber REITs",
+    "exchange": "NYSE",
+    "cik": "0000106535",
+    "isREIT": true
+  },
+  {
+    "ticker": "WSM",
+    "name": "Williams-Sonoma, Inc.",
+    "sector": "Consumer Discretionary",
+    "industry": "Homefurnishing Retail",
+    "exchange": "NYSE",
+    "cik": "0000719955",
+    "isREIT": false
+  },
+  {
+    "ticker": "WMB",
+    "name": "Williams Companies",
+    "sector": "Energy",
+    "industry": "Oil & Gas Storage & Transportation",
+    "exchange": "NYSE",
+    "cik": "0000107263",
+    "isREIT": false
+  },
+  {
+    "ticker": "WTW",
+    "name": "Willis Towers Watson",
+    "sector": "Financials",
+    "industry": "Insurance Brokers",
+    "exchange": "NASDAQ",
+    "cik": "0001140536",
+    "isREIT": false
+  },
+  {
+    "ticker": "WDAY",
+    "name": "Workday, Inc.",
+    "sector": "Information Technology",
+    "industry": "Application Software",
+    "exchange": "NASDAQ",
+    "cik": "0001327811",
+    "isREIT": false
+  },
+  {
+    "ticker": "WYNN",
+    "name": "Wynn Resorts",
+    "sector": "Consumer Discretionary",
+    "industry": "Casinos & Gaming",
+    "exchange": "NASDAQ",
+    "cik": "0001174922",
+    "isREIT": false
+  },
+  {
+    "ticker": "XEL",
+    "name": "Xcel Energy",
+    "sector": "Utilities",
+    "industry": "Multi-Utilities",
+    "exchange": "NASDAQ",
+    "cik": "0000072903",
+    "isREIT": false
+  },
+  {
+    "ticker": "XYL",
+    "name": "Xylem Inc.",
+    "sector": "Industrials",
+    "industry": "Industrial Machinery & Supplies & Components",
+    "exchange": "NYSE",
+    "cik": "0001524472",
+    "isREIT": false
+  },
+  {
+    "ticker": "YUM",
+    "name": "Yum! Brands",
+    "sector": "Consumer Discretionary",
+    "industry": "Restaurants",
+    "exchange": "NYSE",
+    "cik": "0001041061",
+    "isREIT": false
+  },
+  {
+    "ticker": "ZBRA",
+    "name": "Zebra Technologies",
+    "sector": "Information Technology",
+    "industry": "Electronic Equipment & Instruments",
+    "exchange": "NASDAQ",
+    "cik": "0000877212",
+    "isREIT": false
+  },
+  {
+    "ticker": "ZBH",
+    "name": "Zimmer Biomet",
+    "sector": "Health Care",
+    "industry": "Health Care Equipment",
+    "exchange": "NYSE",
+    "cik": "0001136869",
+    "isREIT": false
+  },
+  {
+    "ticker": "BLDR",
+    "name": "Builders FirstSource, Inc.",
+    "sector": "Industrials",
+    "industry": "Building Products",
+    "exchange": "NYSE",
+    "cik": "0001334036",
+    "isREIT": false
+  }
+];
+
+export const OFFICIAL_NASDAQ100_CONSTITUENTS: OfficialConstituentItem[] = [
+  {
+    "ticker": "AAPL",
+    "name": "Apple Inc.",
+    "sector": "Technology",
+    "industry": "Consumer Electronics"
+  },
+  {
+    "ticker": "MSFT",
+    "name": "Microsoft Corporation",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure"
+  },
+  {
+    "ticker": "NVDA",
+    "name": "NVIDIA Corporation",
+    "sector": "Technology",
+    "industry": "Semiconductors"
+  },
+  {
+    "ticker": "AMZN",
+    "name": "Amazon.com, Inc.",
+    "sector": "Consumer Cyclical",
+    "industry": "Internet Retail"
+  },
+  {
+    "ticker": "META",
+    "name": "Meta Platforms, Inc.",
+    "sector": "Communication Services",
+    "industry": "Internet Content"
+  },
+  {
+    "ticker": "AVGO",
+    "name": "Broadcom Inc.",
+    "sector": "Technology",
+    "industry": "Semiconductors"
+  },
+  {
+    "ticker": "TSLA",
+    "name": "Tesla, Inc.",
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Manufacturers"
+  },
+  {
+    "ticker": "GOOGL",
+    "name": "Alphabet Inc. (Class A)",
+    "sector": "Communication Services",
+    "industry": "Internet Content"
+  },
+  {
+    "ticker": "GOOG",
+    "name": "Alphabet Inc. (Class C)",
+    "sector": "Communication Services",
+    "industry": "Internet Content"
+  },
+  {
+    "ticker": "COST",
+    "name": "Costco Wholesale Corporation",
+    "sector": "Consumer Defensive",
+    "industry": "Discount Stores"
+  },
+  {
+    "ticker": "NFLX",
+    "name": "Netflix, Inc.",
+    "sector": "Communication Services",
+    "industry": "Entertainment"
+  },
+  {
+    "ticker": "AMD",
+    "name": "Advanced Micro Devices, Inc.",
+    "sector": "Technology",
+    "industry": "Semiconductors"
+  },
+  {
+    "ticker": "PEP",
+    "name": "PepsiCo, Inc.",
+    "sector": "Consumer Defensive",
+    "industry": "Beverages"
+  },
+  {
+    "ticker": "TMUS",
+    "name": "T-Mobile US, Inc.",
+    "sector": "Communication Services",
+    "industry": "Telecom Services"
+  },
+  {
+    "ticker": "LIN",
+    "name": "Linde plc",
+    "sector": "Basic Materials",
+    "industry": "Specialty Chemicals"
+  },
+  {
+    "ticker": "CSCO",
+    "name": "Cisco Systems, Inc.",
+    "sector": "Technology",
+    "industry": "Communication Equipment"
+  },
+  {
+    "ticker": "ADBE",
+    "name": "Adobe Inc.",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure"
+  },
+  {
+    "ticker": "QCOM",
+    "name": "QUALCOMM Incorporated",
+    "sector": "Technology",
+    "industry": "Semiconductors"
+  },
+  {
+    "ticker": "AMAT",
+    "name": "Applied Materials, Inc.",
+    "sector": "Technology",
+    "industry": "Semiconductor Equipment"
+  },
+  {
+    "ticker": "INTU",
+    "name": "Intuit Inc.",
+    "sector": "Technology",
+    "industry": "Software - Application"
+  },
+  {
+    "ticker": "TXN",
+    "name": "Texas Instruments Incorporated",
+    "sector": "Technology",
+    "industry": "Semiconductors"
+  },
+  {
+    "ticker": "AMGN",
+    "name": "Amgen Inc.",
+    "sector": "Healthcare",
+    "industry": "Biotechnology"
+  },
+  {
+    "ticker": "ISRG",
+    "name": "Intuitive Surgical, Inc.",
+    "sector": "Healthcare",
+    "industry": "Medical Instruments"
+  },
+  {
+    "ticker": "CMCSA",
+    "name": "Comcast Corporation",
+    "sector": "Communication Services",
+    "industry": "Telecom Services"
+  },
+  {
+    "ticker": "HON",
+    "name": "Honeywell International Inc.",
+    "sector": "Industrials",
+    "industry": "Conglomerates"
+  },
+  {
+    "ticker": "BKNG",
+    "name": "Booking Holdings Inc.",
+    "sector": "Consumer Cyclical",
+    "industry": "Travel Services"
+  },
+  {
+    "ticker": "VRTX",
+    "name": "Vertex Pharmaceuticals Inc.",
+    "sector": "Healthcare",
+    "industry": "Biotechnology"
+  },
+  {
+    "ticker": "GILD",
+    "name": "Gilead Sciences, Inc.",
+    "sector": "Healthcare",
+    "industry": "Biotechnology"
+  },
+  {
+    "ticker": "LRCX",
+    "name": "Lam Research Corporation",
+    "sector": "Technology",
+    "industry": "Semiconductor Equipment"
+  },
+  {
+    "ticker": "PANW",
+    "name": "Palo Alto Networks, Inc.",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure"
+  },
+  {
+    "ticker": "REGN",
+    "name": "Regeneron Pharmaceuticals, Inc.",
+    "sector": "Healthcare",
+    "industry": "Biotechnology"
+  },
+  {
+    "ticker": "ADP",
+    "name": "Automatic Data Processing, Inc.",
+    "sector": "Industrials",
+    "industry": "Staffing & Employment Services"
+  },
+  {
+    "ticker": "MDLZ",
+    "name": "Mondelez International, Inc.",
+    "sector": "Consumer Defensive",
+    "industry": "Confectioners"
+  },
+  {
+    "ticker": "SBUX",
+    "name": "Starbucks Corporation",
+    "sector": "Consumer Cyclical",
+    "industry": "Restaurants"
+  },
+  {
+    "ticker": "SNPS",
+    "name": "Synopsys, Inc.",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure"
+  },
+  {
+    "ticker": "CDNS",
+    "name": "Cadence Design Systems, Inc.",
+    "sector": "Technology",
+    "industry": "Software - Application"
+  },
+  {
+    "ticker": "MU",
+    "name": "Micron Technology, Inc.",
+    "sector": "Technology",
+    "industry": "Semiconductors"
+  },
+  {
+    "ticker": "KLAC",
+    "name": "KLA Corporation",
+    "sector": "Technology",
+    "industry": "Semiconductor Equipment"
+  },
+  {
+    "ticker": "MELI",
+    "name": "MercadoLibre, Inc.",
+    "sector": "Consumer Cyclical",
+    "industry": "Internet Retail"
+  },
+  {
+    "ticker": "PYPL",
+    "name": "PayPal Holdings, Inc.",
+    "sector": "Financial Services",
+    "industry": "Credit Services"
+  },
+  {
+    "ticker": "CRWD",
+    "name": "CrowdStrike Holdings, Inc.",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure"
+  },
+  {
+    "ticker": "ABNB",
+    "name": "Airbnb, Inc.",
+    "sector": "Consumer Cyclical",
+    "industry": "Travel Services"
+  },
+  {
+    "ticker": "ORLY",
+    "name": "O'Reilly Automotive, Inc.",
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Parts"
+  },
+  {
+    "ticker": "CTAS",
+    "name": "Cintas Corporation",
+    "sector": "Industrials",
+    "industry": "Specialty Business Services"
+  },
+  {
+    "ticker": "MAR",
+    "name": "Marriott International, Inc.",
+    "sector": "Consumer Cyclical",
+    "industry": "Lodging"
+  },
+  {
+    "ticker": "CEG",
+    "name": "Constellation Energy Corporation",
+    "sector": "Utilities",
+    "industry": "Utilities - Independent Power"
+  },
+  {
+    "ticker": "NXPI",
+    "name": "NXP Semiconductors N.V.",
+    "sector": "Technology",
+    "industry": "Semiconductors"
+  },
+  {
+    "ticker": "PCAR",
+    "name": "PACCAR Inc",
+    "sector": "Industrials",
+    "industry": "Farm & Heavy Machinery"
+  },
+  {
+    "ticker": "CSX",
+    "name": "CSX Corporation",
+    "sector": "Industrials",
+    "industry": "Railroads"
+  },
+  {
+    "ticker": "ASML",
+    "name": "ASML Holding N.V.",
+    "sector": "Technology",
+    "industry": "Semiconductor Equipment"
+  },
+  {
+    "ticker": "DXCM",
+    "name": "DexCom, Inc.",
+    "sector": "Healthcare",
+    "industry": "Medical Devices"
+  },
+  {
+    "ticker": "FTNT",
+    "name": "Fortinet, Inc.",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure"
+  },
+  {
+    "ticker": "MRVL",
+    "name": "Marvell Technology, Inc.",
+    "sector": "Technology",
+    "industry": "Semiconductors"
+  },
+  {
+    "ticker": "ADI",
+    "name": "Analog Devices, Inc.",
+    "sector": "Technology",
+    "industry": "Semiconductors"
+  },
+  {
+    "ticker": "WBD",
+    "name": "Warner Bros. Discovery, Inc.",
+    "sector": "Communication Services",
+    "industry": "Entertainment"
+  },
+  {
+    "ticker": "CPRT",
+    "name": "Copart, Inc.",
+    "sector": "Consumer Cyclical",
+    "industry": "Auto & Truck Dealerships"
+  },
+  {
+    "ticker": "MNST",
+    "name": "Monster Beverage Corporation",
+    "sector": "Consumer Defensive",
+    "industry": "Beverages"
+  },
+  {
+    "ticker": "KDP",
+    "name": "Keurig Dr Pepper Inc.",
+    "sector": "Consumer Defensive",
+    "industry": "Beverages"
+  },
+  {
+    "ticker": "ROST",
+    "name": "Ross Stores, Inc.",
+    "sector": "Consumer Cyclical",
+    "industry": "Apparel Retail"
+  },
+  {
+    "ticker": "MCHP",
+    "name": "Microchip Technology Incorporated",
+    "sector": "Technology",
+    "industry": "Semiconductors"
+  },
+  {
+    "ticker": "CHTR",
+    "name": "Charter Communications, Inc.",
+    "sector": "Communication Services",
+    "industry": "Telecom Services"
+  },
+  {
+    "ticker": "FAST",
+    "name": "Fastenal Company",
+    "sector": "Industrials",
+    "industry": "Industrial Distribution"
+  },
+  {
+    "ticker": "PAYX",
+    "name": "Paychex, Inc.",
+    "sector": "Industrials",
+    "industry": "Staffing & Employment Services"
+  },
+  {
+    "ticker": "KHC",
+    "name": "The Kraft Heinz Company",
+    "sector": "Consumer Defensive",
+    "industry": "Packaged Foods"
+  },
+  {
+    "ticker": "ODFL",
+    "name": "Old Dominion Freight Line, Inc.",
+    "sector": "Industrials",
+    "industry": "Trucking"
+  },
+  {
+    "ticker": "IDXX",
+    "name": "IDEXX Laboratories, Inc.",
+    "sector": "Healthcare",
+    "industry": "Diagnostics & Research"
+  },
+  {
+    "ticker": "VRSK",
+    "name": "Verisk Analytics, Inc.",
+    "sector": "Industrials",
+    "industry": "Consulting Services"
+  },
+  {
+    "ticker": "EXC",
+    "name": "Exelon Corporation",
+    "sector": "Utilities",
+    "industry": "Utilities - Regulated Electric"
+  },
+  {
+    "ticker": "GEHC",
+    "name": "GE HealthCare Technologies Inc.",
+    "sector": "Healthcare",
+    "industry": "Medical Devices"
+  },
+  {
+    "ticker": "LULU",
+    "name": "Lululemon Athletica Inc.",
+    "sector": "Consumer Cyclical",
+    "industry": "Apparel Retail"
+  },
+  {
+    "ticker": "BIIB",
+    "name": "Biogen Inc.",
+    "sector": "Healthcare",
+    "industry": "Biotechnology"
+  },
+  {
+    "ticker": "TEAM",
+    "name": "Atlassian Corporation",
+    "sector": "Technology",
+    "industry": "Software - Application"
+  },
+  {
+    "ticker": "ON",
+    "name": "ON Semiconductor Corporation",
+    "sector": "Technology",
+    "industry": "Semiconductors"
+  },
+  {
+    "ticker": "CDW",
+    "name": "CDW Corporation",
+    "sector": "Technology",
+    "industry": "Information Technology Services"
+  },
+  {
+    "ticker": "CSGP",
+    "name": "CoStar Group, Inc.",
+    "sector": "Real Estate",
+    "industry": "Real Estate Services"
+  },
+  {
+    "ticker": "ZS",
+    "name": "Zscaler, Inc.",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure"
+  },
+  {
+    "ticker": "ANSS",
+    "name": "ANSYS, Inc.",
+    "sector": "Technology",
+    "industry": "Software - Application"
+  },
+  {
+    "ticker": "DLTR",
+    "name": "Dollar Tree, Inc.",
+    "sector": "Consumer Defensive",
+    "industry": "Discount Stores"
+  },
+  {
+    "ticker": "TTWO",
+    "name": "Take-Two Interactive Software, Inc.",
+    "sector": "Communication Services",
+    "industry": "Electronic Gaming"
+  },
+  {
+    "ticker": "ILMN",
+    "name": "Illumina, Inc.",
+    "sector": "Healthcare",
+    "industry": "Diagnostics & Research"
+  },
+  {
+    "ticker": "MRNA",
+    "name": "Moderna, Inc.",
+    "sector": "Healthcare",
+    "industry": "Biotechnology"
+  },
+  {
+    "ticker": "WBA",
+    "name": "Walgreens Boots Alliance, Inc.",
+    "sector": "Healthcare",
+    "industry": "Pharmaceutical Retailers"
+  },
+  {
+    "ticker": "SIRI",
+    "name": "Sirius XM Holdings Inc.",
+    "sector": "Communication Services",
+    "industry": "Broadcasting"
+  },
+  {
+    "ticker": "ARM",
+    "name": "Arm Holdings plc",
+    "sector": "Technology",
+    "industry": "Semiconductors"
+  },
+  {
+    "ticker": "SMCI",
+    "name": "Super Micro Computer, Inc.",
+    "sector": "Technology",
+    "industry": "Computer Hardware"
+  },
+  {
+    "ticker": "DASH",
+    "name": "DoorDash, Inc.",
+    "sector": "Consumer Cyclical",
+    "industry": "Internet Retail"
+  },
+  {
+    "ticker": "MDB",
+    "name": "MongoDB, Inc.",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure"
+  },
+  {
+    "ticker": "TTD",
+    "name": "The Trade Desk, Inc.",
+    "sector": "Technology",
+    "industry": "Software - Application"
+  },
+  {
+    "ticker": "ROP",
+    "name": "Roper Technologies, Inc.",
+    "sector": "Technology",
+    "industry": "Software - Application"
+  },
+  {
+    "ticker": "BKR",
+    "name": "Baker Hughes Company",
+    "sector": "Energy",
+    "industry": "Oil & Gas Equipment"
+  },
+  {
+    "ticker": "FANG",
+    "name": "Diamondback Energy, Inc.",
+    "sector": "Energy",
+    "industry": "Oil & Gas E&P"
+  },
+  {
+    "ticker": "WDAY",
+    "name": "Workday, Inc.",
+    "sector": "Technology",
+    "industry": "Software - Application"
+  },
+  {
+    "ticker": "APP",
+    "name": "AppLovin Corporation",
+    "sector": "Technology",
+    "industry": "Software - Application"
+  },
+  {
+    "ticker": "PLTR",
+    "name": "Palantir Technologies Inc.",
+    "sector": "Technology",
+    "industry": "Software - Application"
+  },
+  {
+    "ticker": "INTC",
+    "name": "Intel Corporation",
+    "sector": "Technology",
+    "industry": "Semiconductors"
+  },
+  {
+    "ticker": "AXON",
+    "name": "Axon Enterprise, Inc.",
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense"
+  },
+  {
+    "ticker": "CCEP",
+    "name": "Coca-Cola Europacific Partners plc",
+    "sector": "Consumer Defensive",
+    "industry": "Beverages"
+  },
+  {
+    "ticker": "GFS",
+    "name": "GlobalFoundries Inc.",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "exchange": "NASDAQ"
+  },
+  {
+    "ticker": "PTC",
+    "name": "PTC Inc.",
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "exchange": "NASDAQ"
+  },
+  {
+    "ticker": "PODD",
+    "name": "Insulet Corporation",
+    "sector": "Healthcare",
+    "industry": "Medical Devices",
+    "exchange": "NASDAQ"
+  },
+  {
+    "ticker": "MEDP",
+    "name": "Medpace Holdings, Inc.",
+    "sector": "Healthcare",
+    "industry": "Diagnostics & Research",
+    "exchange": "NASDAQ"
+  }
+];
+
+export const SUPPLEMENTARY_INSTRUMENTS = [
+  {
+    "ticker": "SPY",
+    "name": "SPDR S&P 500 ETF Trust",
+    "primaryExchange": "NYSE",
+    "securityType": "ETF",
+    "assetClass": "etf",
+    "isETF": true,
+    "sector": "ETF",
+    "industry": "Index Fund",
+    "marketCap": 560000000000,
+    "lastPrice": 570
+  },
+  {
+    "ticker": "QQQ",
+    "name": "Invesco QQQ Trust",
+    "primaryExchange": "NASDAQ",
+    "securityType": "ETF",
+    "assetClass": "etf",
+    "isETF": true,
+    "sector": "ETF",
+    "industry": "Index Fund",
+    "marketCap": 290000000000,
+    "lastPrice": 485
+  },
+  {
+    "ticker": "IWM",
+    "name": "iShares Russell 2000 ETF",
+    "primaryExchange": "NYSE",
+    "securityType": "ETF",
+    "assetClass": "etf",
+    "isETF": true,
+    "sector": "ETF",
+    "industry": "Index Fund",
+    "marketCap": 72000000000,
+    "lastPrice": 220
+  },
+  {
+    "ticker": "DIA",
+    "name": "SPDR Dow Jones Industrial Average ETF",
+    "primaryExchange": "NYSE",
+    "securityType": "ETF",
+    "assetClass": "etf",
+    "isETF": true,
+    "sector": "ETF",
+    "industry": "Index Fund",
+    "marketCap": 36000000000,
+    "lastPrice": 420
+  },
+  {
+    "ticker": "SMH",
+    "name": "VanEck Semiconductor ETF",
+    "primaryExchange": "NASDAQ",
+    "securityType": "ETF",
+    "assetClass": "etf",
+    "isETF": true,
+    "sector": "ETF",
+    "industry": "Technology Fund",
+    "marketCap": 24000000000,
+    "lastPrice": 245
+  },
+  {
+    "ticker": "XLK",
+    "name": "Technology Select Sector SPDR Fund",
+    "primaryExchange": "NYSE",
+    "securityType": "ETF",
+    "assetClass": "etf",
+    "isETF": true,
+    "sector": "ETF",
+    "industry": "Technology Fund",
+    "marketCap": 70000000000,
+    "lastPrice": 225
+  },
+  {
+    "ticker": "XLE",
+    "name": "Energy Select Sector SPDR Fund",
+    "primaryExchange": "NYSE",
+    "securityType": "ETF",
+    "assetClass": "etf",
+    "isETF": true,
+    "sector": "ETF",
+    "industry": "Energy Fund",
+    "marketCap": 38000000000,
+    "lastPrice": 92
+  },
+  {
+    "ticker": "XLF",
+    "name": "Financial Select Sector SPDR Fund",
+    "primaryExchange": "NYSE",
+    "securityType": "ETF",
+    "assetClass": "etf",
+    "isETF": true,
+    "sector": "ETF",
+    "industry": "Financial Fund",
+    "marketCap": 45000000000,
+    "lastPrice": 47
+  },
+  {
+    "ticker": "XLV",
+    "name": "Health Care Select Sector SPDR Fund",
+    "primaryExchange": "NYSE",
+    "securityType": "ETF",
+    "assetClass": "etf",
+    "isETF": true,
+    "sector": "ETF",
+    "industry": "Healthcare Fund",
+    "marketCap": 42000000000,
+    "lastPrice": 148
+  },
+  {
+    "ticker": "XLI",
+    "name": "Industrial Select Sector SPDR Fund",
+    "primaryExchange": "NYSE",
+    "securityType": "ETF",
+    "assetClass": "etf",
+    "isETF": true,
+    "sector": "ETF",
+    "industry": "Industrial Fund",
+    "marketCap": 22000000000,
+    "lastPrice": 132
+  },
+  {
+    "ticker": "XLY",
+    "name": "Consumer Discretionary Select Sector SPDR Fund",
+    "primaryExchange": "NYSE",
+    "securityType": "ETF",
+    "assetClass": "etf",
+    "isETF": true,
+    "sector": "ETF",
+    "industry": "Consumer Fund",
+    "marketCap": 21000000000,
+    "lastPrice": 195
+  },
+  {
+    "ticker": "XLP",
+    "name": "Consumer Staples Select Sector SPDR Fund",
+    "primaryExchange": "NYSE",
+    "securityType": "ETF",
+    "assetClass": "etf",
+    "isETF": true,
+    "sector": "ETF",
+    "industry": "Consumer Fund",
+    "marketCap": 18000000000,
+    "lastPrice": 80
+  },
+  {
+    "ticker": "XLU",
+    "name": "Utilities Select Sector SPDR Fund",
+    "primaryExchange": "NYSE",
+    "securityType": "ETF",
+    "assetClass": "etf",
+    "isETF": true,
+    "sector": "ETF",
+    "industry": "Utilities Fund",
+    "marketCap": 16000000000,
+    "lastPrice": 78
+  },
+  {
+    "ticker": "XLRE",
+    "name": "Real Estate Select Sector SPDR Fund",
+    "primaryExchange": "NYSE",
+    "securityType": "ETF",
+    "assetClass": "etf",
+    "isETF": true,
+    "sector": "ETF",
+    "industry": "Real Estate Fund",
+    "marketCap": 6000000000,
+    "lastPrice": 42
+  },
+  {
+    "ticker": "XBI",
+    "name": "SPDR S&P Biotech ETF",
+    "primaryExchange": "NYSE",
+    "securityType": "ETF",
+    "assetClass": "etf",
+    "isETF": true,
+    "sector": "ETF",
+    "industry": "Biotech Fund",
+    "marketCap": 8000000000,
+    "lastPrice": 95
+  },
+  {
+    "ticker": "ARKK",
+    "name": "ARK Innovation ETF",
+    "primaryExchange": "NYSE",
+    "securityType": "ETF",
+    "assetClass": "etf",
+    "isETF": true,
+    "sector": "ETF",
+    "industry": "Innovation Fund",
+    "marketCap": 6500000000,
+    "lastPrice": 48
+  },
+  {
+    "ticker": "VOO",
+    "name": "Vanguard S&P 500 ETF",
+    "primaryExchange": "NYSE",
+    "securityType": "ETF",
+    "assetClass": "etf",
+    "isETF": true,
+    "sector": "ETF",
+    "industry": "Index Fund",
+    "marketCap": 520000000000,
+    "lastPrice": 525
+  },
+  {
+    "ticker": "VTI",
+    "name": "Vanguard Total Stock Market ETF",
+    "primaryExchange": "NYSE",
+    "securityType": "ETF",
+    "assetClass": "etf",
+    "isETF": true,
+    "sector": "ETF",
+    "industry": "Index Fund",
+    "marketCap": 410000000000,
+    "lastPrice": 280
+  },
+  {
+    "ticker": "SOXX",
+    "name": "iShares Semiconductor ETF",
+    "primaryExchange": "NASDAQ",
+    "securityType": "ETF",
+    "assetClass": "etf",
+    "isETF": true,
+    "sector": "ETF",
+    "industry": "Semiconductor Fund",
+    "marketCap": 15000000000,
+    "lastPrice": 230
+  },
+  {
+    "ticker": "TQQQ",
+    "name": "ProShares UltraPro QQQ",
+    "primaryExchange": "NASDAQ",
+    "securityType": "ETF",
+    "assetClass": "etf",
+    "isETF": true,
+    "sector": "ETF",
+    "industry": "Leveraged Fund",
+    "marketCap": 22000000000,
+    "lastPrice": 75
+  },
+  {
+    "ticker": "TSM",
+    "name": "Taiwan Semiconductor Manufacturing Co., Ltd. ADR",
+    "primaryExchange": "NYSE",
+    "securityType": "ADR",
+    "isADR": true,
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "marketCap": 890000000000,
+    "lastPrice": 175
+  },
+  {
+    "ticker": "ASML",
+    "name": "ASML Holding N.V. ADR",
+    "primaryExchange": "NASDAQ",
+    "securityType": "ADR",
+    "isADR": true,
+    "sector": "Technology",
+    "industry": "Semiconductor Equipment",
+    "marketCap": 340000000000,
+    "lastPrice": 820
+  },
+  {
+    "ticker": "NVO",
+    "name": "Novo Nordisk A/S ADR",
+    "primaryExchange": "NYSE",
+    "securityType": "ADR",
+    "isADR": true,
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers",
+    "marketCap": 560000000000,
+    "lastPrice": 125
+  },
+  {
+    "ticker": "AZN",
+    "name": "AstraZeneca PLC ADR",
+    "primaryExchange": "NASDAQ",
+    "securityType": "ADR",
+    "isADR": true,
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers",
+    "marketCap": 235000000000,
+    "lastPrice": 76
+  },
+  {
+    "ticker": "BABA",
+    "name": "Alibaba Group Holding Limited ADR",
+    "primaryExchange": "NYSE",
+    "securityType": "ADR",
+    "isADR": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Internet Retail",
+    "marketCap": 245000000000,
+    "lastPrice": 105
+  },
+  {
+    "ticker": "PDD",
+    "name": "PDD Holdings Inc. ADR",
+    "primaryExchange": "NASDAQ",
+    "securityType": "ADR",
+    "isADR": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Internet Retail",
+    "marketCap": 180000000000,
+    "lastPrice": 135
+  },
+  {
+    "ticker": "JD",
+    "name": "JD.com, Inc. ADR",
+    "primaryExchange": "NASDAQ",
+    "securityType": "ADR",
+    "isADR": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Internet Retail",
+    "marketCap": 58000000000,
+    "lastPrice": 38
+  },
+  {
+    "ticker": "NIO",
+    "name": "NIO Inc. ADR",
+    "primaryExchange": "NYSE",
+    "securityType": "ADR",
+    "isADR": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Manufacturers",
+    "marketCap": 11000000000,
+    "lastPrice": 5.5
+  },
+  {
+    "ticker": "LI",
+    "name": "Li Auto Inc. ADR",
+    "primaryExchange": "NASDAQ",
+    "securityType": "ADR",
+    "isADR": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Manufacturers",
+    "marketCap": 26000000000,
+    "lastPrice": 25
+  },
+  {
+    "ticker": "XPEV",
+    "name": "XPeng Inc. ADR",
+    "primaryExchange": "NYSE",
+    "securityType": "ADR",
+    "isADR": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Manufacturers",
+    "marketCap": 12000000000,
+    "lastPrice": 12
+  },
+  {
+    "ticker": "SAP",
+    "name": "SAP SE ADR",
+    "primaryExchange": "NYSE",
+    "securityType": "ADR",
+    "isADR": true,
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "marketCap": 260000000000,
+    "lastPrice": 220
+  },
+  {
+    "ticker": "HDB",
+    "name": "HDFC Bank Limited ADR",
+    "primaryExchange": "NYSE",
+    "securityType": "ADR",
+    "isADR": true,
+    "sector": "Financial Services",
+    "industry": "Banks - Diversified",
+    "marketCap": 155000000000,
+    "lastPrice": 62
+  },
+  {
+    "ticker": "IBN",
+    "name": "ICICI Bank Limited ADR",
+    "primaryExchange": "NYSE",
+    "securityType": "ADR",
+    "isADR": true,
+    "sector": "Financial Services",
+    "industry": "Banks - Diversified",
+    "marketCap": 105000000000,
+    "lastPrice": 29
+  },
+  {
+    "ticker": "BNTX",
+    "name": "BioNTech SE ADR",
+    "primaryExchange": "NASDAQ",
+    "securityType": "ADR",
+    "isADR": true,
+    "sector": "Healthcare",
+    "industry": "Biotechnology",
+    "marketCap": 28000000000,
+    "lastPrice": 115
+  },
+  {
+    "ticker": "SE",
+    "name": "Sea Limited ADR",
+    "primaryExchange": "NYSE",
+    "securityType": "ADR",
+    "isADR": true,
+    "sector": "Consumer Cyclical",
+    "industry": "Internet Retail",
+    "marketCap": 52000000000,
+    "lastPrice": 90
+  },
+  {
+    "ticker": "BIDU",
+    "name": "Baidu, Inc. ADR",
+    "primaryExchange": "NASDAQ",
+    "securityType": "ADR",
+    "isADR": true,
+    "sector": "Communication Services",
+    "industry": "Internet Content",
+    "marketCap": 36000000000,
+    "lastPrice": 95
+  },
+  {
+    "ticker": "ARM",
+    "name": "Arm Holdings plc ADR",
+    "primaryExchange": "NASDAQ",
+    "securityType": "ADR",
+    "isADR": true,
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "marketCap": 145000000000,
+    "lastPrice": 140
+  },
+  {
+    "ticker": "SHOP",
+    "name": "Shopify Inc.",
+    "primaryExchange": "NYSE",
+    "securityType": "COMMON_STOCK",
+    "isADR": false,
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "marketCap": 105000000000,
+    "lastPrice": 82
+  },
+  {
+    "ticker": "PLD",
+    "name": "Prologis, Inc.",
+    "primaryExchange": "NYSE",
+    "securityType": "REIT",
+    "isREIT": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Industrial",
+    "marketCap": 110000000000,
+    "lastPrice": 120
+  },
+  {
+    "ticker": "AMT",
+    "name": "American Tower Corporation",
+    "primaryExchange": "NYSE",
+    "securityType": "REIT",
+    "isREIT": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Specialty",
+    "marketCap": 95000000000,
+    "lastPrice": 205
+  },
+  {
+    "ticker": "EQIX",
+    "name": "Equinix, Inc.",
+    "primaryExchange": "NASDAQ",
+    "securityType": "REIT",
+    "isREIT": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Specialty",
+    "marketCap": 82000000000,
+    "lastPrice": 850
+  },
+  {
+    "ticker": "PSA",
+    "name": "Public Storage",
+    "primaryExchange": "NYSE",
+    "securityType": "REIT",
+    "isREIT": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Industrial",
+    "marketCap": 60000000000,
+    "lastPrice": 340
+  },
+  {
+    "ticker": "CCI",
+    "name": "Crown Castle Inc.",
+    "primaryExchange": "NYSE",
+    "securityType": "REIT",
+    "isREIT": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Specialty",
+    "marketCap": 48000000000,
+    "lastPrice": 112
+  },
+  {
+    "ticker": "O",
+    "name": "Realty Income Corporation",
+    "primaryExchange": "NYSE",
+    "securityType": "REIT",
+    "isREIT": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Retail",
+    "marketCap": 52000000000,
+    "lastPrice": 60
+  },
+  {
+    "ticker": "SPG",
+    "name": "Simon Property Group, Inc.",
+    "primaryExchange": "NYSE",
+    "securityType": "REIT",
+    "isREIT": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Retail",
+    "marketCap": 54000000000,
+    "lastPrice": 165
+  },
+  {
+    "ticker": "WELL",
+    "name": "Welltower Inc.",
+    "primaryExchange": "NYSE",
+    "securityType": "REIT",
+    "isREIT": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Healthcare Facilities",
+    "marketCap": 74000000000,
+    "lastPrice": 125
+  },
+  {
+    "ticker": "DLR",
+    "name": "Digital Realty Trust, Inc.",
+    "primaryExchange": "NYSE",
+    "securityType": "REIT",
+    "isREIT": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Specialty",
+    "marketCap": 52000000000,
+    "lastPrice": 160
+  },
+  {
+    "ticker": "SBAC",
+    "name": "SBA Communications Corporation",
+    "primaryExchange": "NASDAQ",
+    "securityType": "REIT",
+    "isREIT": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Specialty",
+    "marketCap": 26000000000,
+    "lastPrice": 240
+  },
+  {
+    "ticker": "EXR",
+    "name": "Extra Space Storage Inc.",
+    "primaryExchange": "NYSE",
+    "securityType": "REIT",
+    "isREIT": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Industrial",
+    "marketCap": 36000000000,
+    "lastPrice": 170
+  },
+  {
+    "ticker": "AVB",
+    "name": "AvalonBay Communities, Inc.",
+    "primaryExchange": "NYSE",
+    "securityType": "REIT",
+    "isREIT": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Residential",
+    "marketCap": 32000000000,
+    "lastPrice": 225
+  },
+  {
+    "ticker": "EQR",
+    "name": "Equity Residential",
+    "primaryExchange": "NYSE",
+    "securityType": "REIT",
+    "isREIT": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Residential",
+    "marketCap": 28000000000,
+    "lastPrice": 74
+  },
+  {
+    "ticker": "VICI",
+    "name": "VICI Properties Inc.",
+    "primaryExchange": "NYSE",
+    "securityType": "REIT",
+    "isREIT": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Diversified",
+    "marketCap": 34000000000,
+    "lastPrice": 32
+  },
+  {
+    "ticker": "CPT",
+    "name": "Camden Property Trust",
+    "primaryExchange": "NYSE",
+    "securityType": "REIT",
+    "isREIT": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Residential",
+    "marketCap": 13000000000,
+    "lastPrice": 120
+  },
+  {
+    "ticker": "MAA",
+    "name": "Mid-America Apartment Communities, Inc.",
+    "primaryExchange": "NYSE",
+    "securityType": "REIT",
+    "isREIT": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Residential",
+    "marketCap": 18000000000,
+    "lastPrice": 155
+  },
+  {
+    "ticker": "ARE",
+    "name": "Alexandria Real Estate Equities, Inc.",
+    "primaryExchange": "NYSE",
+    "securityType": "REIT",
+    "isREIT": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Office",
+    "marketCap": 20000000000,
+    "lastPrice": 115
+  },
+  {
+    "ticker": "ESS",
+    "name": "Essex Property Trust, Inc.",
+    "primaryExchange": "NYSE",
+    "securityType": "REIT",
+    "isREIT": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Residential",
+    "marketCap": 19000000000,
+    "lastPrice": 295
+  },
+  {
+    "ticker": "UDR",
+    "name": "UDR, Inc.",
+    "primaryExchange": "NYSE",
+    "securityType": "REIT",
+    "isREIT": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Residential",
+    "marketCap": 14000000000,
+    "lastPrice": 42
+  },
+  {
+    "ticker": "KIM",
+    "name": "Kimco Realty Corporation",
+    "primaryExchange": "NYSE",
+    "securityType": "REIT",
+    "isREIT": true,
+    "sector": "Real Estate",
+    "industry": "REIT - Retail",
+    "marketCap": 15000000000,
+    "lastPrice": 23
+  },
+  {
+    "ticker": "SOFI",
+    "name": "SoFi Technologies, Inc.",
+    "primaryExchange": "NASDAQ",
+    "securityType": "COMMON_STOCK",
+    "sector": "Financial Services",
+    "industry": "Credit Services",
+    "marketCap": 9500000000,
+    "lastPrice": 9.8
+  },
+  {
+    "ticker": "RIVN",
+    "name": "Rivian Automotive, Inc.",
+    "primaryExchange": "NASDAQ",
+    "securityType": "COMMON_STOCK",
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Manufacturers",
+    "marketCap": 11500000000,
+    "lastPrice": 11.2
+  },
+  {
+    "ticker": "LCID",
+    "name": "Lucid Group, Inc.",
+    "primaryExchange": "NASDAQ",
+    "securityType": "COMMON_STOCK",
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Manufacturers",
+    "marketCap": 7800000000,
+    "lastPrice": 3.4
+  },
+  {
+    "ticker": "AFRM",
+    "name": "Affirm Holdings, Inc.",
+    "primaryExchange": "NASDAQ",
+    "securityType": "COMMON_STOCK",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "marketCap": 13500000000,
+    "lastPrice": 44
+  },
+  {
+    "ticker": "ROKU",
+    "name": "Roku, Inc.",
+    "primaryExchange": "NASDAQ",
+    "securityType": "COMMON_STOCK",
+    "sector": "Communication Services",
+    "industry": "Entertainment",
+    "marketCap": 10200000000,
+    "lastPrice": 72
+  },
+  {
+    "ticker": "SNAP",
+    "name": "Snap Inc.",
+    "primaryExchange": "NYSE",
+    "securityType": "COMMON_STOCK",
+    "sector": "Communication Services",
+    "industry": "Internet Content",
+    "marketCap": 18000000000,
+    "lastPrice": 10.5
+  },
+  {
+    "ticker": "PINS",
+    "name": "Pinterest, Inc.",
+    "primaryExchange": "NYSE",
+    "securityType": "COMMON_STOCK",
+    "sector": "Communication Services",
+    "industry": "Internet Content",
+    "marketCap": 22000000000,
+    "lastPrice": 32
+  },
+  {
+    "ticker": "MARA",
+    "name": "MARA Holdings, Inc.",
+    "primaryExchange": "NASDAQ",
+    "securityType": "COMMON_STOCK",
+    "sector": "Financial Services",
+    "industry": "Capital Markets",
+    "marketCap": 4500000000,
+    "lastPrice": 16.5
+  },
+  {
+    "ticker": "RIOT",
+    "name": "Riot Platforms, Inc.",
+    "primaryExchange": "NASDAQ",
+    "securityType": "COMMON_STOCK",
+    "sector": "Financial Services",
+    "industry": "Capital Markets",
+    "marketCap": 2800000000,
+    "lastPrice": 8.5
+  },
+  {
+    "ticker": "HOOD",
+    "name": "Robinhood Markets, Inc.",
+    "primaryExchange": "NASDAQ",
+    "securityType": "COMMON_STOCK",
+    "sector": "Financial Services",
+    "industry": "Capital Markets",
+    "marketCap": 21000000000,
+    "lastPrice": 24
+  },
+  {
+    "ticker": "DKNG",
+    "name": "DraftKings Inc.",
+    "primaryExchange": "NASDAQ",
+    "securityType": "COMMON_STOCK",
+    "sector": "Consumer Cyclical",
+    "industry": "Gambling",
+    "marketCap": 19500000000,
+    "lastPrice": 41
+  },
+  {
+    "ticker": "MSTR",
+    "name": "MicroStrategy Incorporated",
+    "primaryExchange": "NASDAQ",
+    "securityType": "COMMON_STOCK",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "marketCap": 38000000000,
+    "lastPrice": 185
+  },
+  {
+    "ticker": "PATH",
+    "name": "UiPath Inc.",
+    "primaryExchange": "NYSE",
+    "securityType": "COMMON_STOCK",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "marketCap": 7200000000,
+    "lastPrice": 12.5
+  },
+  {
+    "ticker": "AI",
+    "name": "C3.ai, Inc.",
+    "primaryExchange": "NYSE",
+    "securityType": "COMMON_STOCK",
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "marketCap": 3100000000,
+    "lastPrice": 24.5
+  },
+  {
+    "ticker": "UPST",
+    "name": "Upstart Holdings, Inc.",
+    "primaryExchange": "NASDAQ",
+    "securityType": "COMMON_STOCK",
+    "sector": "Financial Services",
+    "industry": "Credit Services",
+    "marketCap": 3400000000,
+    "lastPrice": 38
+  },
+  {
+    "ticker": "AVAV",
+    "name": "AeroVironment, Inc.",
+    "primaryExchange": "NASDAQ",
+    "securityType": "COMMON_STOCK",
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "marketCap": 5500000000,
+    "lastPrice": 195
+  },
+  {
+    "ticker": "KTOS",
+    "name": "Kratos Defense & Security Solutions, Inc.",
+    "primaryExchange": "NASDAQ",
+    "securityType": "COMMON_STOCK",
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "marketCap": 3200000000,
+    "lastPrice": 22.5
+  },
+  {
+    "ticker": "CRSP",
+    "name": "CRISPR Therapeutics AG",
+    "primaryExchange": "NASDAQ",
+    "securityType": "COMMON_STOCK",
+    "sector": "Healthcare",
+    "industry": "Biotechnology",
+    "marketCap": 1800000000,
+    "lastPrice": 46
+  },
+  {
+    "ticker": "IONQ",
+    "name": "IonQ, Inc.",
+    "primaryExchange": "NYSE",
+    "securityType": "COMMON_STOCK",
+    "sector": "Technology",
+    "industry": "Computer Hardware",
+    "marketCap": 1900000000,
+    "lastPrice": 8.8
+  },
+  {
+    "ticker": "SYM",
+    "name": "Symbotic Inc.",
+    "primaryExchange": "NASDAQ",
+    "securityType": "COMMON_STOCK",
+    "sector": "Technology",
+    "industry": "Industrial Automation",
+    "marketCap": 1700000000,
+    "lastPrice": 28.5
+  },
+  {
+    "ticker": "RDDT",
+    "name": "Reddit, Inc.",
+    "primaryExchange": "NYSE",
+    "securityType": "COMMON_STOCK",
+    "sector": "Communication Services",
+    "industry": "Internet Content",
+    "marketCap": 11500000000,
+    "lastPrice": 68
+  },
+  {
+    "ticker": "NTDOY",
+    "name": "Nintendo Co., Ltd. ADR/OTC",
+    "primaryExchange": "OTC",
+    "securityType": "OTC",
+    "isADR": true,
+    "sector": "Communication Services",
+    "industry": "Electronic Gaming",
+    "marketCap": 64000000000,
+    "lastPrice": 13.5
+  }
+];

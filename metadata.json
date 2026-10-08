@@ -1,0 +1,8 @@
+{
+  "name": "Remix V6.5 US Stock AI Scanner \u0026 Alert",
+  "description": "极速美股 Wilder RSI 查询、多维度股票筛选器与智能超卖预警系统，帮助投资者 10 秒内发现交易机会。",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

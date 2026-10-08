@@ -1,0 +1,15 @@
+{
+  "activeProvider": "PAPER_SANDBOX",
+  "alpacaKeyId": "",
+  "alpacaSecretKey": "",
+  "alpacaMode": "PAPER",
+  "ibkrHost": "127.0.0.1",
+  "ibkrPort": 5000,
+  "paperBalance": 100000,
+  "defaultPositionSizePercent": 5,
+  "maxRiskPerTradePercent": 1,
+  "autoBracketEnabled": true,
+  "trailingStopEnabled": true,
+  "trailingStopPercent": 1.5,
+  "breakEvenStepTriggerPercent": 50
+}

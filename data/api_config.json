@@ -1,0 +1,18 @@
+{
+  "finnhubApiKey": "dauanj1r01qkvn4p3qi0dauanj1r01qkvn4p3qig",
+  "massiveApiKey": "1mfijJuxcpzxhX_0GshqQ3N7SV9s8mlP",
+  "alphaVantageApiKey": "LIWYBWJZZWD1NII5",
+  "primaryProvider": "AUTO",
+  "enableFailover": true,
+  "providerStatus": {
+    "finnhub": {
+      "status": "UNTESTED"
+    },
+    "massive": {
+      "status": "UNTESTED"
+    },
+    "alphaVantage": {
+      "status": "UNTESTED"
+    }
+  }
+}

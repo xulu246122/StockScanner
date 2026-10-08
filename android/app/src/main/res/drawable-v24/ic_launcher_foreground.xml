@@ -1,0 +1,102 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 1. AI Radar Scan Pulse Background Ring (Center: 54, 54, Radius: 28) -->
+    <path
+        android:pathData="M54,26 A28,28 0 1,0 54,82 A28,28 0 1,0 54,26 Z"
+        android:strokeWidth="1.5"
+        android:strokeColor="#33FFFFFF"
+        android:fillColor="#00000000" />
+
+    <!-- 2. Radar Inner Ring (Radius: 18) -->
+    <path
+        android:pathData="M54,36 A18,18 0 1,0 54,72 A18,18 0 1,0 54,36 Z"
+        android:strokeWidth="1.0"
+        android:strokeColor="#22FFFFFF"
+        android:fillColor="#00000000" />
+
+    <!-- 3. Radar Sweep Arc Sector (Google Green/Cyan Pulse) -->
+    <path
+        android:pathData="M54,54 L54,26 A28,28 0 0,1 78,40 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="54"
+                android:startY="54"
+                android:endX="78"
+                android:endY="40"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#0034A853" />
+                <item android:offset="1.0" android:color="#4D34A853" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 4. Bar 1: Foundation Bar (Google Yellow / Amber) Center X=38, Bottom Y=70, Top Y=52, Width=6 -->
+    <path
+        android:pathData="M35,70 L35,54 C35,52.9 35.9,52 37,52 L39,52 C40.1,52 41,52.9 41,54 L41,70 C41,71.1 40.1,72 39,72 L37,72 C35.9,72 35,71.1 35,70 Z"
+        android:fillColor="#FBBC04" />
+    <!-- Bar 1 Wick -->
+    <path
+        android:pathData="M38,48 L38,52 M38,72 L38,75"
+        android:strokeWidth="1.5"
+        android:strokeColor="#FBBC04"
+        android:strokeLineCap="round" />
+
+    <!-- 5. Bar 2: Core Growth Bar (Google Blue) Center X=48, Bottom Y=70, Top Y=44, Width=6 -->
+    <path
+        android:pathData="M45,70 L45,46 C45,44.9 45.9,44 47,44 L49,44 C50.1,44 51,44.9 51,46 L51,70 C51,71.1 50.1,72 49,72 L47,72 C45.9,72 45,71.1 45,70 Z"
+        android:fillColor="#4285F4" />
+    <!-- Bar 2 Wick -->
+    <path
+        android:pathData="M48,40 L48,44 M48,72 L48,76"
+        android:strokeWidth="1.5"
+        android:strokeColor="#4285F4"
+        android:strokeLineCap="round" />
+
+    <!-- 6. Bar 3: Breakthrough Candlestick (Google Green) Center X=58, Bottom Y=70, Top Y=36, Width=6 -->
+    <path
+        android:pathData="M55,70 L55,38 C55,36.9 55.9,36 57,36 L59,36 C60.1,36 61,36.9 61,38 L61,70 C61,71.1 60.1,72 59,72 L57,72 C55.9,72 55,71.1 55,70 Z"
+        android:fillColor="#34A853" />
+    <!-- Bar 3 Wick -->
+    <path
+        android:pathData="M58,32 L58,36 M58,72 L58,75"
+        android:strokeWidth="1.5"
+        android:strokeColor="#34A853"
+        android:strokeLineCap="round" />
+
+    <!-- 7. Dynamic Trend Ascending Curve (Smooth bezier crossing bars upward) -->
+    <path
+        android:pathData="M30,68 C36,66 42,56 48,50 C54,44 60,34 69,29"
+        android:strokeWidth="3.2"
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round" />
+
+    <path
+        android:pathData="M30,68 C36,66 42,56 48,50 C54,44 60,34 69,29"
+        android:strokeWidth="1.8"
+        android:strokeColor="#00E676"
+        android:strokeLineCap="round" />
+
+    <!-- 8. Upward Momentum Arrow at Trend Tip (X=69, Y=29) -->
+    <path
+        android:pathData="M63,28 L72,27 L70,36"
+        android:strokeWidth="2.4"
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- 9. Google AI Sparkle (Gemini 4-Point Star) at (X=73, Y=23) Alert Beacon -->
+    <path
+        android:pathData="M73,17 C73,20 74.5,21.5 77.5,22 C74.5,22.5 73,24 73,27 C73,24 71.5,22.5 68.5,22 C71.5,21.5 73,20 73,17 Z"
+        android:fillColor="#EA4335" />
+
+    <!-- 10. Center Micro Core Dot (X=54, Y=54) -->
+    <path
+        android:pathData="M54,52 A2,2 0 1,0 54,56 A2,2 0 1,0 54,52 Z"
+        android:fillColor="#80FFFFFF" />
+
+</vector>

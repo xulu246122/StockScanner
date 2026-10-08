@@ -1,0 +1,21 @@
+{
+  "appId": "com.v65.desktop",
+  "productName": "V6.5 Desktop Preview",
+  "directories": {
+    "output": "release"
+  },
+  "win": {
+    "target": "dir",
+    "icon": "public/icon.ico"
+  },
+  "asar": false,
+  "files": [
+    "dist/**/*",
+    "public/**/*",
+    "data/**/*",
+    "main.js",
+    "preload.cjs",
+    "package.json",
+    "node_modules/**/*"
+  ]
+}

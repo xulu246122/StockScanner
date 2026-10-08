@@ -1,0 +1,42 @@
+{
+  "cash": 90000,
+  "initialBalance": 100000,
+  "realizedPnL": 0,
+  "positions": {
+    "TSLA": {
+      "symbol": "TSLA",
+      "qty": 50,
+      "avgEntryPrice": 200,
+      "currentPrice": 200,
+      "marketValue": 10000,
+      "costBasis": 10000,
+      "unrealizedPnL": 0,
+      "unrealizedPnLPercent": 0,
+      "takeProfitPrice": 220,
+      "stopLossPrice": 190,
+      "trailingStopPrice": 190,
+      "highestPriceSinceEntry": 200,
+      "breakEvenActive": false,
+      "openedAt": "2026-10-08T02:18:14.631Z"
+    }
+  },
+  "orders": [
+    {
+      "id": "ORD-MUYWQ2UF-724",
+      "symbol": "TSLA",
+      "side": "BUY",
+      "orderType": "LIMIT",
+      "orderClass": "BRACKET",
+      "qty": 50,
+      "limitPrice": 200,
+      "stopLossPrice": 190,
+      "takeProfitPrice": 220,
+      "filledPrice": 200,
+      "status": "FILLED",
+      "strategySource": "TEST_PERSISTENCE",
+      "createdAt": "2026-10-08T02:18:14.631Z",
+      "filledAt": "2026-10-08T02:18:14.631Z",
+      "notes": "Bracket OCO 单: 止盈 $220, 止损 $190"
+    }
+  ]
+}

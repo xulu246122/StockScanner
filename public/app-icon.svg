@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="108" height="108">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A192F" />
+      <stop offset="100%" stop-color="#1E3A8A" />
+    </linearGradient>
+    <linearGradient id="sweepGrad" x1="54" y1="54" x2="78" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#34A853" stop-opacity="0" />
+      <stop offset="100%" stop-color="#34A853" stop-opacity="0.35" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded squircle -->
+  <rect width="108" height="108" rx="24" fill="url(#bgGrad)" />
+
+  <!-- Outer Radar Pulse Ring -->
+  <circle cx="54" cy="54" r="28" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" />
+  <!-- Inner Radar Ring -->
+  <circle cx="54" cy="54" r="18" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+
+  <!-- Radar Sweep Sector -->
+  <path d="M54,54 L54,26 A28,28 0 0,1 78,40 Z" fill="url(#sweepGrad)" />
+
+  <!-- Candlestick 1: Yellow/Amber -->
+  <line x1="38" y1="48" x2="38" y2="75" stroke="#FBBC04" stroke-width="1.5" stroke-linecap="round" />
+  <rect x="35" y="52" width="6" height="18" rx="2" fill="#FBBC04" />
+
+  <!-- Candlestick 2: Google Blue -->
+  <line x1="48" y1="40" x2="48" y2="76" stroke="#4285F4" stroke-width="1.5" stroke-linecap="round" />
+  <rect x="45" y="44" width="6" height="26" rx="2" fill="#4285F4" />
+
+  <!-- Candlestick 3: Google Emerald Green -->
+  <line x1="58" y1="32" x2="58" y2="75" stroke="#34A853" stroke-width="1.5" stroke-linecap="round" />
+  <rect x="55" y="36" width="6" height="34" rx="2" fill="#34A853" />
+
+  <!-- Upward Trendline -->
+  <path d="M30,68 C36,66 42,56 48,50 C54,44 60,34 69,29" fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round" />
+  <path d="M30,68 C36,66 42,56 48,50 C54,44 60,34 69,29" fill="none" stroke="#00E676" stroke-width="1.8" stroke-linecap="round" />
+
+  <!-- Trend Arrow Tip -->
+  <polyline points="63,28 72,27 70,36" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Google AI Sparkle Star (Alert Beacon) -->
+  <path d="M73,17 C73,20 74.5,21.5 77.5,22 C74.5,22.5 73,24 73,27 C73,24 71.5,22.5 68.5,22 C71.5,21.5 73,20 73,17 Z" fill="#EA4335" />
+
+  <!-- Center Micro Point -->
+  <circle cx="54" cy="54" r="2" fill="rgba(255,255,255,0.7)" />
+</svg>

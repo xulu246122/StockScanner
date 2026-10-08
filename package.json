@@ -1,0 +1,72 @@
+{
+  "name": "react-example",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node ./node_modules/tsx/dist/cli.mjs server.ts",
+    "dev:inspect": "node ./node_modules/tsx/dist/cli.mjs --inspect server.ts",
+    "start": "node ./node_modules/tsx/dist/cli.mjs server.ts",
+    "build:frontend": "node ./node_modules/vite/bin/vite.js build",
+    "build:backend": "node ./node_modules/esbuild/bin/esbuild server.ts --bundle --platform=node --target=node18 --outfile=dist/server.cjs --external:sqlite3 --external:sql.js --external:vite --external:@vitejs/* --format=cjs",
+    "build": "node scripts/build.js",
+    "preview": "node ./node_modules/vite/bin/vite.js preview",
+    "clean": "node -e \"const fs=require('fs'); fs.rmSync('dist', {recursive:true,force:true}); fs.rmSync('server.js', {force:true});\"",
+    "lint": "node ./node_modules/typescript/bin/tsc --noEmit",
+    "test": "node ./node_modules/tsx/dist/cli.mjs tests/terminal.test.ts",
+    "check": "node ./node_modules/typescript/bin/tsc --noEmit && node ./node_modules/tsx/dist/cli.mjs tests/terminal.test.ts",
+    "antigravity:check": "node ./node_modules/tsx/dist/cli.mjs scripts/antigravity-check.ts",
+    "build:desktop": "node scripts/build-desktop.js",
+    "build:android": "node scripts/build-android.js"
+  },
+  "dependencies": {
+    "@google/genai": "^2.4.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^6.1.1",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "lucide-react": "^0.546.0",
+    "motion": "^12.23.24",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "sql.js": "^1.14.2",
+    "vite": "^8.3.0",
+    "ws": "^8.22.0"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^8.5.2",
+    "@capacitor/cli": "^8.5.2",
+    "@capacitor/core": "^8.5.2",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/sql.js": "^1.4.11",
+    "@types/ws": "^8.18.2",
+    "autoprefixer": "^10.4.21",
+    "electron": "^44.5.1",
+    "electron-builder": "^26.15.3",
+    "esbuild": "^0.28.0",
+    "npm-run-all": "^4.1.5",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.21.0",
+    "typescript": "^7.0.2",
+    "wait-on": "^9.5.1"
+  },
+  "main": "main.js",
+  "buildConfig": {
+    "appId": "com.v65.desktop",
+    "productName": "V6.5 Desktop Preview",
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": "dir"
+    },
+    "files": [
+      "dist/**/*",
+      "main.js",
+      "package.json"
+    ]
+  }
+}
