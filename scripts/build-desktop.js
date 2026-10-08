@@ -30,6 +30,11 @@ if (fs.existsSync(releaseDir)) {
   }
 }
 
+// Ensure any running instances of the app are closed so files are not locked
+try {
+  execSync('taskkill /F /IM "V6.5 Desktop Preview.exe" /T 2>nul || exit 0', { shell: 'cmd.exe', stdio: 'ignore' });
+} catch (e) {}
+
 execSync(`node "${electronBuilderBin}" --config electron-builder.json --win --dir`, {
   cwd: rootDir,
   stdio: 'inherit'

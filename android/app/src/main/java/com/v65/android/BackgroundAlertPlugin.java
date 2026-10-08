@@ -139,4 +139,72 @@ public class BackgroundAlertPlugin extends Plugin {
         ret.put("granted", granted);
         call.resolve(ret);
     }
+
+    @PluginMethod
+    public void moveToBackground(PluginCall call) {
+        try {
+            Context ctx = getContext();
+            Intent serviceIntent = new Intent(ctx, StockScannerForegroundService.class);
+            serviceIntent.putExtra("interval_seconds", 30);
+            serviceIntent.putExtra("bg_mode", true);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                ctx.startForegroundService(serviceIntent);
+            } else {
+                ctx.startService(serviceIntent);
+            }
+
+            if (getActivity() != null) {
+                getActivity().runOnUiThread(() -> {
+                    getActivity().moveTaskToBack(true);
+                });
+            }
+
+            JSObject ret = new JSObject();
+            ret.put("success", true);
+            ret.put("inBackground", true);
+            call.resolve(ret);
+        } catch (Exception e) {
+            call.reject("Failed to move to background: " + e.getMessage(), e);
+        }
+    }
+
+    @PluginMethod
+    public void exitApplication(PluginCall call) {
+        try {
+            Context ctx = getContext();
+            Intent serviceIntent = new Intent(ctx, StockScannerForegroundService.class);
+            serviceIntent.setAction("ACTION_STOP");
+            ctx.startService(serviceIntent);
+
+            if (getActivity() != null) {
+                getActivity().runOnUiThread(() -> {
+                    getActivity().finishAffinity();
+                    android.os.Process.killProcess(android.os.Process.myPid());
+                    System.exit(0);
+                });
+            }
+
+            JSObject ret = new JSObject();
+            ret.put("success", true);
+            call.resolve(ret);
+        } catch (Exception e) {
+            call.reject("Failed to exit application: " + e.getMessage(), e);
+        }
+    }
+
+    @PluginMethod
+    public void showExitChoiceDialog(PluginCall call) {
+        try {
+            if (getActivity() instanceof MainActivity) {
+                ((MainActivity) getActivity()).showExitChoiceDialog();
+                JSObject ret = new JSObject();
+                ret.put("success", true);
+                call.resolve(ret);
+            } else {
+                call.reject("Activity is not MainActivity");
+            }
+        } catch (Exception e) {
+            call.reject("Failed to show exit choice dialog: " + e.getMessage(), e);
+        }
+    }
 }

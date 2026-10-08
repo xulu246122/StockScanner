@@ -56,7 +56,12 @@ public class StockScannerForegroundService extends Service {
         isRunning = true;
         acquireWakeLock();
 
-        Notification notification = buildDaemonNotification("🛡️ StockScanner 美股AI雷达监控中 | 扫描周期: " + intervalSeconds + "秒");
+        boolean isBgMode = intent != null && intent.getBooleanExtra("bg_mode", false);
+        String initialMsg = isBgMode
+                ? "美股AI量化雷达实时运行 | 持续监控异动与反弹"
+                : "美股AI雷达监控中 | 扫描周期: " + intervalSeconds + "秒";
+
+        Notification notification = buildDaemonNotification(initialMsg);
         try {
             startForeground(DAEMON_NOTIFICATION_ID, notification);
         } catch (Exception e) {
@@ -114,10 +119,13 @@ public class StockScannerForegroundService extends Service {
 
         return new NotificationCompat.Builder(this, CHANNEL_DAEMON_ID)
                 .setSmallIcon(R.mipmap.ic_launcher)
-                .setContentTitle("StockScanner AI 智能监控守护")
+                .setContentTitle("🛡️ StockScanner 正在后台监控中")
                 .setContentText(contentText)
-                .setStyle(new NotificationCompat.BigTextStyle().bigText(contentText))
-                .setPriority(NotificationCompat.PRIORITY_LOW)
+                .setSubText("美股量化AI守护")
+                .setStyle(new NotificationCompat.BigTextStyle()
+                        .setBigContentTitle("🛡️ StockScanner 美股量化AI监控守护中")
+                        .bigText(contentText + "\n程序进程正在后台持续运行，实时监控美股异动与暴跌反弹机会。点击随时切回应用。"))
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setOngoing(true)
                 .setContentIntent(pendingIntent)
                 .build();
@@ -151,14 +159,14 @@ public class StockScannerForegroundService extends Service {
             NotificationManager nm = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
             if (nm == null) return;
 
-            // 1. Daemon Channel (Low priority, persistent)
+            // 1. Daemon Channel (Default priority, persistent status bar icon & shade)
             NotificationChannel daemonChannel = new NotificationChannel(
                     CHANNEL_DAEMON_ID,
                     "StockScanner 后台常驻守护",
-                    NotificationManager.IMPORTANCE_LOW
+                    NotificationManager.IMPORTANCE_DEFAULT
             );
-            daemonChannel.setDescription("用于在后台持续保持美股扫描进程常驻运行");
-            daemonChannel.setShowBadge(false);
+            daemonChannel.setDescription("用于在后台持续保持美股扫描进程常驻运行，并在 Android 顶部状态栏显示守护状态");
+            daemonChannel.setShowBadge(true);
             nm.createNotificationChannel(daemonChannel);
 
             // 2. High-Priority Alerts Channel (Heads-up banner, sound, vibration, like WeChat)

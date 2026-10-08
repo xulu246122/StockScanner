@@ -17,6 +17,8 @@ import { RadarScannerView } from './views/RadarScannerView.tsx';
 import { PlungeReboundView } from './views/PlungeReboundView.tsx';
 import { SettingsView } from './views/SettingsView.tsx';
 import { ExitConfirmModal } from './components/modals/ExitConfirmModal.tsx';
+import { AndroidGestureExitModal } from './components/modals/AndroidGestureExitModal.tsx';
+import { useAndroidGestureExit } from './hooks/useAndroidGestureExit.ts';
 import { LiveAlertBanner } from './components/alerts/LiveAlertBanner.tsx';
 import { ErrorBoundary } from './components/common/ErrorBoundary.tsx';
 import { Minus, Square, X as CloseIcon } from 'lucide-react';
@@ -35,6 +37,12 @@ export default function App() {
 
   // Responsive & Platform detection: Distinguish Mobile/Android (bottom nav) vs Windows/Desktop (sidebar nav)
   const { isAndroid, isMobile } = useResponsive();
+
+  // Android Gesture Exit & Background Interception hook
+  const {
+    isExitModalOpen: isAndroidGestureExitOpen,
+    closeExitModal: closeAndroidGestureExit
+  } = useAndroidGestureExit();
 
   // Modal states
   const [isAddWatchlistOpen, setIsAddWatchlistOpen] = useState(false);
@@ -524,10 +532,16 @@ export default function App() {
         onToggleWatchlist={handleToggleWatchlist}
       />
 
-      {/* Modal 4: Exit Application Confirmation Modal */}
+      {/* Modal 4: Desktop Exit Application Confirmation Modal */}
       <ExitConfirmModal
         isOpen={isExitModalOpen}
         onClose={() => setIsExitModalOpen(false)}
+      />
+
+      {/* Modal 5: Android Mobile Gesture Exit & Background Daemon Modal */}
+      <AndroidGestureExitModal
+        isOpen={isAndroidGestureExitOpen}
+        onClose={closeAndroidGestureExit}
       />
     </div>
   );

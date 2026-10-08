@@ -185,6 +185,57 @@ class BackgroundAlertService {
     } catch {}
     return true;
   }
+
+  /**
+   * 将 Android 应用切换至后台运行，并在顶部状态栏保持常驻监控守护
+   */
+  public async moveToBackground(): Promise<boolean> {
+    if (!this.isNativeAndroid()) return false;
+    try {
+      const plugin = (window as any).Capacitor?.Plugins?.BackgroundAlert;
+      if (plugin?.moveToBackground) {
+        const res = await plugin.moveToBackground();
+        return !!res?.success;
+      }
+    } catch (e) {
+      console.warn('[BackgroundAlertService] Failed to move to background:', e);
+    }
+    return false;
+  }
+
+  /**
+   * 彻底退出 Android 应用并安全杀死进程
+   */
+  public async exitApplication(): Promise<boolean> {
+    if (!this.isNativeAndroid()) return false;
+    try {
+      const plugin = (window as any).Capacitor?.Plugins?.BackgroundAlert;
+      if (plugin?.exitApplication) {
+        const res = await plugin.exitApplication();
+        return !!res?.success;
+      }
+    } catch (e) {
+      console.warn('[BackgroundAlertService] Failed to exit application:', e);
+    }
+    return false;
+  }
+
+  /**
+   * 弹出 Android 原生退出/后台运行选择对话框
+   */
+  public async showNativeExitChoiceDialog(): Promise<boolean> {
+    if (!this.isNativeAndroid()) return false;
+    try {
+      const plugin = (window as any).Capacitor?.Plugins?.BackgroundAlert;
+      if (plugin?.showExitChoiceDialog) {
+        const res = await plugin.showExitChoiceDialog();
+        return !!res?.success;
+      }
+    } catch (e) {
+      console.warn('[BackgroundAlertService] Failed to show native exit dialog:', e);
+    }
+    return false;
+  }
 }
 
 export const backgroundAlertService = BackgroundAlertService.getInstance();
