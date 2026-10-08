@@ -128,12 +128,16 @@ export function StrategyLibrarySidebar({
         if (scoreA.hasBacktest !== scoreB.hasBacktest) {
           return scoreA.hasBacktest ? -1 : 1;
         }
-        return (scoreB.oosSharpe || scoreB.sharpe || 0) - (scoreA.oosSharpe || scoreA.sharpe || 0);
+        const sharpeA = scoreA.oosSharpe || scoreA.sharpe || scoreA.benchmarkSharpe || 0;
+        const sharpeB = scoreB.oosSharpe || scoreB.sharpe || scoreB.benchmarkSharpe || 0;
+        return sharpeB - sharpeA;
       } else if (sortBy === 'WIN_RATE') {
         if (scoreA.hasBacktest !== scoreB.hasBacktest) {
           return scoreA.hasBacktest ? -1 : 1;
         }
-        return (scoreB.oosWinRate || scoreB.winRate || 0) - (scoreA.oosWinRate || scoreA.winRate || 0);
+        const winA = scoreA.oosWinRate || scoreA.winRate || scoreA.empiricalWinRate || 0;
+        const winB = scoreB.oosWinRate || scoreB.winRate || scoreB.empiricalWinRate || 0;
+        return winB - winA;
       } else if (sortBy === 'RISK') {
         return scoreB.riskScore - scoreA.riskScore;
       }

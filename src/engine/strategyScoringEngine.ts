@@ -15,6 +15,7 @@
  */
 
 import { StrategyDefinition } from '../types.ts';
+import { getAuthoritativeBenchmark } from './authoritativeBenchmarks.ts';
 
 export type StrategyScoreDataSource = 'RESEARCH' | 'BACKTEST' | 'OOS' | 'LIVE';
 export type StrategyRiskProfile = 'Conservative' | 'Moderate' | 'Aggressive';
@@ -72,6 +73,12 @@ export interface StrategyScoreV2 {
   oosMaxDrawdown: number | null;
   cagr: number | null;
   sampleTradesCount: number | null;
+
+  // Authoritative Academic & Empirical Benchmark Metrics (literature-backed)
+  empiricalWinRate?: number;
+  payoffRatio?: number;
+  benchmarkSharpe?: number;
+  benchmarkCitation?: string;
 }
 
 /**
@@ -386,7 +393,11 @@ export function computeStrategyScoreV2(st: StrategyDefinition): StrategyScoreV2 
     oosWinRate: oosRes.winRate,
     oosMaxDrawdown: oosRes.maxDrawdown,
     cagr: isBacktested ? st.localBacktest?.cagr ?? null : null,
-    sampleTradesCount: isBacktested ? st.localBacktest?.sampleTradesCount ?? null : null
+    sampleTradesCount: isBacktested ? st.localBacktest?.sampleTradesCount ?? null : null,
+    empiricalWinRate: getAuthoritativeBenchmark(st.id)?.empiricalWinRate ?? (st as any).empiricalWinRate ?? (st as any).expectedWinRate,
+    payoffRatio: getAuthoritativeBenchmark(st.id)?.payoffRatio ?? (st as any).profitFactorEst,
+    benchmarkSharpe: getAuthoritativeBenchmark(st.id)?.benchmarkSharpe ?? (st as any).sharpeEst,
+    benchmarkCitation: getAuthoritativeBenchmark(st.id)?.citation
   };
 }
 
@@ -410,6 +421,10 @@ export function computeStrategyScore(st: StrategyDefinition): {
   sharpe: number | null;
   maxDrawdown: number | null;
   breakdown: StrategyScoreV2['breakdown'];
+  empiricalWinRate?: number;
+  payoffRatio?: number;
+  benchmarkSharpe?: number;
+  benchmarkCitation?: string;
 } {
   const v2 = computeStrategyScoreV2(st);
   return {
@@ -428,6 +443,10 @@ export function computeStrategyScore(st: StrategyDefinition): {
     winRate: v2.winRate,
     sharpe: v2.sharpe,
     maxDrawdown: v2.maxDrawdown,
-    breakdown: v2.breakdown
+    breakdown: v2.breakdown,
+    empiricalWinRate: v2.empiricalWinRate,
+    payoffRatio: v2.payoffRatio,
+    benchmarkSharpe: v2.benchmarkSharpe,
+    benchmarkCitation: v2.benchmarkCitation
   };
 }

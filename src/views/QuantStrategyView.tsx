@@ -12,6 +12,7 @@ import {
 import { apiClient } from '../services/apiClient.ts';
 import { MOCK_QUANT_INDICATORS } from '../mock/quantStrategiesMock.ts';
 import { strategyEngine, validateStrategySchema } from '../engine/strategyEngine.ts';
+import { resolveStrategyDisplayMetrics, getAuthoritativeBenchmark } from '../engine/authoritativeBenchmarks.ts';
 import { StrategyLibrarySidebar, computeStrategyScore } from '../components/quant/StrategyLibrarySidebar.tsx';
 import { StrategyWorkspaceMain } from '../components/quant/StrategyWorkspaceMain.tsx';
 import { IndicatorWorkspaceView } from '../components/quant/IndicatorWorkspaceView.tsx';
@@ -334,11 +335,10 @@ export function QuantStrategyView({
                   </span>
                   <span className="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded bg-purple-50 text-purple-700">
                     {(() => {
-                      if (!selectedStrategy) return '75% 胜率';
+                      if (!selectedStrategy) return '胜率待测';
                       const s = computeStrategyScore(selectedStrategy);
-                      if (s.winRate !== null && s.winRate !== undefined) return `${s.winRate}% 胜率`;
-                      if ((selectedStrategy as any).expectedWinRate) return `${(selectedStrategy as any).expectedWinRate}% 胜率`;
-                      return '75% 胜率 (基准)';
+                      const m = resolveStrategyDisplayMetrics(selectedStrategy, s);
+                      return `${m.winRate}% 胜率 (${m.label}) · 盈亏比 ${m.payoffRatio}:1`;
                     })()}
                   </span>
                 </div>
@@ -797,22 +797,30 @@ export function QuantStrategyView({
                         }`}
                       >
                         <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-1.5">
-                            <span className="font-black text-xs text-slate-900">{st.nameZh || st.name}</span>
-                            <span className="text-[10px] font-mono text-slate-500 bg-slate-100 px-1.5 py-0.2 rounded">{st.shortName}</span>
+                          <div className="flex items-center gap-1.5 min-w-0 pr-2">
+                            <span className="font-black text-xs text-slate-900 truncate">{st.nameZh || st.name}</span>
+                            <span className="text-[10px] font-mono text-slate-500 bg-slate-100 px-1.5 py-0.2 rounded shrink-0">{st.shortName}</span>
                           </div>
-                          <span className="text-xs font-mono font-black text-blue-600">
-                            {score.winRate !== null && score.winRate !== undefined
-                              ? `${score.winRate}% 胜率`
-                              : ((st as any).expectedWinRate ? `${(st as any).expectedWinRate}% 胜率` : '75% 胜率')}
-                          </span>
+                          {(() => {
+                            const m = resolveStrategyDisplayMetrics(st, score);
+                            return (
+                              <div className="text-right shrink-0">
+                                <div className="text-xs font-mono font-black text-[#0b57d0]">
+                                  {m.winRate}% 胜率
+                                </div>
+                                <div className="text-[9px] font-mono text-slate-400">
+                                  盈亏比 {m.payoffRatio}:1
+                                </div>
+                              </div>
+                            );
+                          })()}
                         </div>
 
                         <div className="flex items-center justify-between text-[10px] text-slate-500">
-                          <span>作者: {st.author}</span>
-                          <div className="flex items-center gap-1">
+                          <span className="truncate max-w-[180px]">作者: {st.author}</span>
+                          <div className="flex items-center gap-1 shrink-0">
                             <span className="px-1.5 py-0.2 rounded bg-emerald-50 text-emerald-700 font-bold">
-                              {st.evidenceLevel || 'A级'}
+                              {st.evidenceLevel ? `Tier ${String(st.evidenceLevel).replace('LEVEL_', '')}` : 'A级'}
                             </span>
                             <span className="px-1.5 py-0.2 rounded bg-purple-50 text-purple-700 font-bold">
                               {st.holdingPeriodLabel || '波段'}
